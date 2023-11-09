@@ -62,32 +62,51 @@
                 class="button-container"
                 on:click={() => scrollToSection("main")}
             >
-                <!-- <img
-                    class="nav-logo"
-                    src="images/MORI_HORIZONTAL_BLACK.png"
-                    alt="logo_black"
-                /> -->
-                APP LOGO
+                <div class="logo-container">
+                    <img class="nav-logo" src="images/logo.png" alt="logo" />
+                    MoriMori
+                </div>
+                <!-- APP LOGO -->
             </button>
         </div>
         <div class="menu">
             {#if !isTablet}
-                <button
-                    class="button-container"
-                    on:click={() => scrollToSection("about")}
-                >
-                    ABOUT
-                </button>
-                <button
-                    class="button-container"
-                    on:click={() => scrollToSection("download")}
-                >
-                    DOWNLOAD
-                </button>
-                <button
-                    class="button-container"
-                    on:click={() => scrollToSection("news")}>NEWS</button
-                >
+                {#if showNavbarShadow}
+                    <button
+                        class="button-container-white"
+                        on:click={() => scrollToSection("about")}
+                    >
+                        ABOUT
+                    </button>
+                    <button
+                        class="button-container-white"
+                        on:click={() => scrollToSection("download")}
+                    >
+                        DOWNLOAD
+                    </button>
+                    <button
+                        class="button-container-white"
+                        on:click={() => scrollToSection("news")}>NEWS</button
+                    >
+                {:else if !showNavbarShadow}
+                    <button
+                        class="button-container"
+                        on:click={() => scrollToSection("about")}
+                    >
+                        ABOUT
+                    </button>
+                    <button
+                        class="button-container"
+                        on:click={() => scrollToSection("download")}
+                    >
+                        DOWNLOAD
+                    </button>
+                    <button
+                        class="button-container"
+                        on:click={() => scrollToSection("news")}>NEWS</button
+                    >
+                {/if}
+
                 <!-- <button class="button-container">PARTNERSHIP</button> -->
             {/if}
             {#if isTablet}
@@ -196,7 +215,11 @@
         line-height: 0px;
     }
 
-    .button-container-mobile {
+    .button-container:hover {
+        color: white;
+    }
+
+    .button-container-white {
         border: none;
         padding: 0;
         background-color: transparent;
@@ -207,8 +230,25 @@
         line-height: 0px;
     }
 
-    .button-container:hover {
-        color: white;
+    .button-container-white:hover {
+        color: #32c7ff;
+    }
+
+    .logo-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .button-container-mobile {
+        border: none;
+        padding: 0;
+        background-color: transparent;
+        cursor: pointer;
+        color: black;
+        outline: none;
+        transition: color 0.3s ease;
+        line-height: 0px;
     }
 
     .nav-logo {
