@@ -17,21 +17,21 @@
 </script>
 
 <Navbar />
-<div class="desktop-container">
-    <HomeSection />
-    <AboutSection />
-    <DownloadSection />
-    <ReviewSection />
-</div>
+<!-- <div class="desktop-container"> -->
+<HomeSection />
+<AboutSection />
+<DownloadSection />
+<ReviewSection />
+<!-- </div> -->
 <Footer />
 
 <style>
-    .desktop-container {
+    /* .desktop-container {
         height: 100%;
         width: 100%;
         user-select: none;
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
-    }
+    } */
 </style>
