@@ -238,6 +238,8 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        font-size: 18px;
+        font-weight: 500;
     }
 
     .button-container-mobile {
@@ -252,7 +254,7 @@
     }
 
     .nav-logo {
-        height: 70px;
+        height: 60px;
     }
 
     .menu {
