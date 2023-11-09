@@ -1,7 +1,7 @@
 <script>
-    import Navbar from "../components/sample1/navbar.svelte";
-    import Footer from "../components/sample1/footer.svelte";
-    import AboutSection from "../sections/sample1/about-section.svelte";
+    import Navbar from "../components/navbar.svelte";
+    import Footer from "../components/footer.svelte";
+    import AboutSection from "../sections/about-section.svelte";
     import DownloadSection from "../sections/sample1/download-section.svelte";
     import HomeSection from "../sections/sample1/home-section.svelte";
     import ReviewSection from "../sections/sample1/review-section.svelte";
