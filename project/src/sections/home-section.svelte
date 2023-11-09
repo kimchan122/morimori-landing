@@ -7,11 +7,14 @@
     const moveRatio = 0.01;
     let isTablet = false;
 
-    let mainText = ["당신의 모든 것의 출발점", "그런 당신을 위한"];
-    let textArray = ["창작", "소통", "지원"];
+    let mainText = [
+        "창작자도 소비자도 함께하는 플랫폼",
+        "MoriMori와 함께하세요,",
+    ];
+    let textArray = ["투고", "소통", "제안"];
     let currentIndex = 0;
     let isFadingOut = false;
-    /*
+
     function fadeOut() {
         isFadingOut = true;
         setTimeout(() => {
@@ -28,8 +31,6 @@
     onMount(() => {
         fadeOut(); // 초기에 fadeOut 함수 호출
     });
-
-    */
 
     if (!isTablet) {
         function handleMouseMove(event) {
@@ -69,8 +70,8 @@
                     </div>
                     <div class="slogan-second">{mainText[1]}</div>
                     <span class="slogan-first" class:out={isFadingOut}>
-                        <!-- {textArray[currentIndex]} -->
-                        모리
+                        {textArray[currentIndex]}
+                        <!-- 모리 -->
                     </span>
                     <!-- <span class="slogan-doit">하세요</span> -->
                     <!-- <span class="slogan-first-doit">하세요</span> -->
@@ -105,8 +106,8 @@
                     </div>
                     <div class="slogan-second-mb">{mainText[1]}</div>
                     <span class="slogan-first-mb" class:out={isFadingOut}>
-                        <!-- {textArray[currentIndex]} -->
-                        모리
+                        {textArray[currentIndex]}
+                        <!-- 모리 -->
                     </span>
                     <!-- <span class="slogan-doit-mb">하세요</span> -->
                     <!-- <span class="slogan-first-doit-mb">하세요</span> -->
@@ -195,14 +196,14 @@
     .slogan-third {
         font-family: "NotoSansKR";
         color: black;
-        font-size: 40px;
+        font-size: 28px;
         font-weight: 300;
     }
 
     .slogan-second {
         font-family: "NotoSansKR";
         color: black;
-        font-size: 58px;
+        font-size: 36px;
         font-weight: 500;
     }
 
@@ -210,7 +211,7 @@
         transition: opacity 0.4s;
         font-family: "NotoSansKR";
         color: white;
-        font-size: 120px;
+        font-size: 144px;
         font-weight: 700;
     }
 
@@ -326,7 +327,7 @@
         /* box-sizing: border-box; */
     }
 
-    .slogan-third-mb {
+    /* .slogan-third-mb {
         font-family: "NotoSansKR";
         color: black;
         font-size: 28px;
@@ -346,7 +347,7 @@
         color: white;
         font-size: 144px;
         font-weight: 700;
-    }
+    } */
 
     /* .slogan-first-doit-mb {
         transition: opacity 0.4s;
@@ -356,19 +357,19 @@
         font-weight: 700;
     } */
 
-    @media (max-width: 400px) {
+    @media (max-width: 420px) {
         /* 브레이크포인트 설정 */
         .slogan-third-mb {
             font-family: "NotoSansKR";
             color: black;
-            font-size: 28px;
+            font-size: 20px;
             font-weight: 300;
         }
 
         .slogan-second-mb {
             font-family: "NotoSansKR";
             color: black;
-            font-size: 40px;
+            font-size: 26px;
             font-weight: 500;
         }
 
@@ -388,19 +389,19 @@
         } */
     }
 
-    @media (min-width: 401px) and (max-width: 980px) {
+    @media (min-width: 421px) and (max-width: 980px) {
         /* 브레이크포인트 설정 */
         .slogan-third-mb {
             font-family: "NotoSansKR";
             color: black;
-            font-size: 32px;
+            font-size: 26px;
             font-weight: 300;
         }
 
         .slogan-second-mb {
             font-family: "NotoSansKR";
             color: black;
-            font-size: 48px;
+            font-size: 32px;
             font-weight: 500;
         }
 
@@ -408,7 +409,7 @@
             transition: opacity 0.4s;
             font-family: "NotoSansKR";
             color: white;
-            font-size: 120px;
+            font-size: 144px;
             font-weight: 700;
         }
         /* .slogan-first-doit-mb {

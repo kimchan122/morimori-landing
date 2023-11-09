@@ -283,9 +283,9 @@
         padding: 70px 30px 70px 30px;
         box-sizing: border-box;
     }
-    /* .role-mb {
+    .role-mb {
         padding-bottom: 6em;
-    } */
+    }
 
     .carousel-box-mb {
         width: 100%;
