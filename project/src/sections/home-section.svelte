@@ -54,8 +54,6 @@
     checkScreenWidth();
 </script>
 
-<!-- <div id="main" class="desktop-section-container" /> -->
-
 {#if !isTablet}
     <section id="main" class="bg-lightblue">
         <div class="top-container">
@@ -181,7 +179,8 @@
 
     .phone-image {
         /* width: 100%; */
-        /* max-width: 300px; */
+        max-width: 400px;
+        object-fit: contain;
         /* padding: 0px 30px 0px 30px; */
         box-sizing: border-box;
         /* position: absolute;
@@ -215,13 +214,13 @@
         font-weight: 700;
     }
 
-    .slogan-first-doit {
+    /* .slogan-first-doit {
         transition: opacity 0.4s;
         font-family: "NotoSansKR";
         color: black;
         font-size: 88px;
         font-weight: 700;
-    }
+    } */
     /* .slogan-doit {
         font-family: "NotoSansKR";
         margin-left: 10px;
@@ -245,7 +244,7 @@
         width: 200px;
     }
 
-    .footnote {
+    /* .footnote {
         color: #aaaaaa;
         font-size: 12px;
         margin-top: 35px;
@@ -262,14 +261,14 @@
         color: white;
         cursor: pointer;
         outline: none;
-    }
+    } */
 
     /* for mobile / tablet */
 
-    .bg-white-mb {
+    /* .bg-white-mb {
         background-color: white;
         height: 150px;
-    }
+    } */
     .bg-lightblue-mb {
         background-color: #32c7ff;
         /* height: 600px; */
@@ -349,13 +348,13 @@
         font-weight: 700;
     }
 
-    .slogan-first-doit-mb {
+    /* .slogan-first-doit-mb {
         transition: opacity 0.4s;
         font-family: "NotoSansKR";
         color: black;
         font-size: 144px;
         font-weight: 700;
-    }
+    } */
 
     @media (max-width: 400px) {
         /* 브레이크포인트 설정 */
@@ -380,13 +379,13 @@
             font-size: 120px;
             font-weight: 700;
         }
-        .slogan-first-doit-mb {
+        /* .slogan-first-doit-mb {
             transition: opacity 0.4s;
             font-family: "NotoSansKR";
             color: black;
             font-size: 64px;
             font-weight: 700;
-        }
+        } */
     }
 
     @media (min-width: 401px) and (max-width: 980px) {
@@ -412,13 +411,13 @@
             font-size: 120px;
             font-weight: 700;
         }
-        .slogan-first-doit-mb {
+        /* .slogan-first-doit-mb {
             transition: opacity 0.4s;
             font-family: "NotoSansKR";
             color: black;
             font-size: 108px;
             font-weight: 700;
-        }
+        } */
     }
 
     /* .slogan-doit-mb {
@@ -447,14 +446,14 @@
         width: 150px;
     }
 
-    .footnote-mb {
+    /* .footnote-mb {
         color: #aaaaaa;
         font-size: 12px;
         margin-top: 35px;
         padding-top: 15px;
         text-align: left;
-    }
-
+    } */
+    /* 
     .goto-web-service-mb {
         height: 61px;
         border: 1px solid #aaaaaa;
@@ -464,5 +463,5 @@
         color: white;
         cursor: pointer;
         outline: none;
-    }
+    } */
 </style>

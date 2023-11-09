@@ -59,12 +59,12 @@
     <div class="inner-navbar">
         <div class="logo">
             <button
-                class="button-container"
+                class="logobutton-container"
                 on:click={() => scrollToSection("main")}
             >
                 <div class="logo-container">
                     <img class="nav-logo" src="images/logo.png" alt="logo" />
-                    MoriMori
+                    <span>MoriMori</span>
                 </div>
                 <!-- APP LOGO -->
             </button>
@@ -179,7 +179,6 @@
         justify-content: center;
         align-items: center;
 
-        /* font-family: "Inter"; */
         color: #fff;
         text-align: center;
 
@@ -194,7 +193,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        /* margin: 0 auto; */
         padding: 0px 50px;
         box-sizing: border-box;
     }
@@ -202,6 +200,17 @@
     .show-box-shadow {
         background-color: white;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .logobutton-container {
+        border: none;
+        padding: 0;
+        background-color: transparent;
+        cursor: pointer;
+        color: black;
+        outline: none;
+        transition: color 0.3s ease;
+        line-height: 0px;
     }
 
     .button-container {
@@ -316,11 +325,5 @@
         color: black;
         outline: none;
         transition: color 0.3s ease;
-        /* line-height: 0px; */
     }
-
-    /* .button-container-mobile-element:hover {
-        color: #30c5d2;
-        color: white;
-    } */
 </style>

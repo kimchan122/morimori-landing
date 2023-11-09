@@ -150,7 +150,7 @@
     .role {
         padding-bottom: 6em;
     }
-    .role-box {
+    /* .role-box {
         display: flex;
         justify-content: space-between;
     }
@@ -201,7 +201,7 @@
 
     .store-badge {
         width: 200px;
-    }
+    } */
 
     .carousel-box {
         width: 250px;
@@ -283,9 +283,9 @@
         padding: 70px 30px 70px 30px;
         box-sizing: border-box;
     }
-    .role-mb {
-        /* padding-bottom: 6em; */
-    }
+    /* .role-mb {
+        padding-bottom: 6em;
+    } */
 
     .carousel-box-mb {
         width: 100%;
