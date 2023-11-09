@@ -142,7 +142,7 @@
         width: 100%;
         max-width: 1080px;
         margin: 0 auto;
-        padding: calc(70px + 6em) 0 0 0;
+        padding: 70px 0 70px 0;
         display: flex;
         flex-direction: column;
         color: black;

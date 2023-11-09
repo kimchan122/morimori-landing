@@ -177,12 +177,10 @@
         margin: 0 auto;
     }
     .container {
-        padding-top: 70px;
         width: 100%;
-        /* height: calc(100vh - 70px); */
         max-width: 1080px;
         margin: 0 auto;
-        /* padding: 6em 0 0 0; */
+        padding: 70px 0 70px 0;
         display: flex;
         flex-direction: column;
         color: black;

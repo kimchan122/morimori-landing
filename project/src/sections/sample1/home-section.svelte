@@ -89,16 +89,9 @@
                         alt="download-app-store"
                     />
                 </div>
-                <div>
+                <!-- <div>
                     <button class="goto-web-service">서비스로 이동</button>
-                </div>
-                <div class="footnote">
-                    *1 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, *2 quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -185,6 +178,15 @@
         color: black;
         flex-wrap: wrap;
     } */
+
+    .phone-image {
+        /* width: 100%; */
+        /* max-width: 300px; */
+        /* padding: 0px 30px 0px 30px; */
+        box-sizing: border-box;
+        /* position: absolute;
+        bottom: 0; */
+    }
 
     .intro {
         margin-right: 4rem;
