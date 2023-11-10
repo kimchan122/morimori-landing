@@ -189,6 +189,7 @@
     }
 
     .intro {
+        padding-top: 70px;
         margin-right: 4rem;
         max-width: 420px;
     }

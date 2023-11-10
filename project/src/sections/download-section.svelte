@@ -31,7 +31,7 @@
 </script>
 
 {#if !isTablet}
-    <section id="download" class="bg-gray">
+    <section id="download" class="bg-white">
         <div class="container">
             <div class="role">
                 <h1>DOWNLOAD</h1>
@@ -172,10 +172,16 @@
 {/if}
 
 <style>
-    .bg-gray {
+    /* .bg-gray {
         background-color: #eeeeee;
         margin: 0 auto;
+    } */
+
+    .bg-white {
+        background-color: white;
+        height: 0 auto;
     }
+
     .container {
         width: 100%;
         max-width: 1080px;
