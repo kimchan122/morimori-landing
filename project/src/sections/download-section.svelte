@@ -34,7 +34,7 @@
     <section id="download" class="bg-gray">
         <div class="container">
             <div class="role">
-                <h1>TITLE</h1>
+                <h1>DOWNLOAD</h1>
                 <div class="role-box">
                     <div>
                         <img
@@ -104,7 +104,7 @@
     <section id="download" class="bg-gray">
         <div class="container-mb">
             <div class="role-mb">
-                <h1>TITLE</h1>
+                <h1>DOWNLOAD</h1>
                 <div class="role-box-mb">
                     <div>
                         <img

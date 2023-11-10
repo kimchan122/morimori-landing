@@ -4,7 +4,7 @@
     import AboutSection from "../sections/about-section.svelte";
     import DownloadSection from "../sections/download-section.svelte";
     import HomeSection from "../sections/home-section.svelte";
-    import ReviewSection from "../sections/review-section.svelte";
+    import ReviewSection from "../sections/news-section.svelte";
 
     // let isTabletView = false;
 

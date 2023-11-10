@@ -57,16 +57,16 @@
             </div>
             <div class="right-box">
                 <div class="right-container-links">
-                    <a>Discord</a>
+                    <!-- <a>Discord</a>
                     <a>Youtube</a>
                     <a>Linkedin</a>
-                    <a>Instagram</a>
+                    <a>Instagram</a> -->
                 </div>
                 <div class="right-container">
-                    <a>앱 정보</a>
+                    <!-- <a>앱 정보</a>
                     <a>회사 개요</a>
                     <a>뉴스</a>
-                    <a>자주 묻는 질문</a>
+                    <a>자주 묻는 질문</a> -->
                 </div>
             </div>
         </div>
@@ -175,7 +175,7 @@
         max-height: 100px;
     }
 
-    .badges {
+    /* .badges {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -184,7 +184,7 @@
 
     .store-badge {
         width: 200px;
-    }
+    } */
 
     .platform-badges {
         display: flex;
@@ -202,23 +202,23 @@
         flex-direction: column;
     }
 
-    .right-container-links a {
+    /* .right-container-links a {
         text-align: left;
         color: black;
         margin-bottom: 20px;
         text-decoration: underline;
-    }
+    } */
 
     .right-container {
         display: flex;
         flex-direction: column;
     }
 
-    .right-container a {
+    /* .right-container a {
         text-align: left;
         color: black;
         margin-bottom: 20px;
-    }
+    } */
 
     .footer {
         width: 100%;
