@@ -3,6 +3,3 @@
 </script>
 
 <PageSample1 />
-
-<style>
-</style>

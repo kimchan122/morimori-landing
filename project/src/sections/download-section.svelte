@@ -6,6 +6,24 @@
     let characterY = 0;
     const moveRatio = 0.01;
     let isTablet = false;
+    let titleArray = [
+        "다양한 이벤트",
+        "무단학습 방지",
+        "SNS 연동",
+        "플랫폼 지원",
+    ];
+    let scriptArray = [
+        "MoriMori의 즐거운 이벤트와 함께하세요!",
+        "그림 무단학습 방지 환경에서 걱정없이 즐기세요!",
+        "게시한 내용을 다양한 SNS를 통해 공유하세요!",
+        "다양한 플랫폼으로 MoriMori를 즐겨보세요!",
+    ];
+    let imageArray = [
+        "images/sample1.jpg",
+        "images/sample2.png",
+        "images/sample3.jpg",
+        "images/sample1.jpg",
+    ];
 
     if (!isTablet) {
         function handleMouseMove(event) {
@@ -36,42 +54,17 @@
             <div class="role">
                 <h1>DOWNLOAD</h1>
                 <div class="role-box">
-                    <div>
-                        <img
-                            class="role-box-image"
-                            src="images/sample1.jpg"
-                            alt="role"
-                        />
-                        <h2>Lorem ipsum</h2>
-                        <p>dolor sit amet, consectetur</p>
-                    </div>
-                    <div>
-                        <img
-                            class="role-box-image"
-                            src="images/sample2.png"
-                            alt="role"
-                        />
-                        <h2>Lorem ipsum</h2>
-                        <p>dolor sit amet, consectetur</p>
-                    </div>
-                    <div>
-                        <img
-                            class="role-box-image"
-                            src="images/sample3.jpg"
-                            alt="role"
-                        />
-                        <h2>Lorem ipsum</h2>
-                        <p>dolor sit amet, consectetur</p>
-                    </div>
-                    <div>
-                        <img
-                            class="role-box-image"
-                            src="images/sample1.jpg"
-                            alt="role"
-                        />
-                        <h2>Lorem ipsum</h2>
-                        <p>dolor sit amet, consectetur</p>
-                    </div>
+                    {#each titleArray as title, i}
+                        <div>
+                            <img
+                                class="role-box-image"
+                                src={imageArray[i]}
+                                alt="role"
+                            />
+                            <h2>{title}</h2>
+                            <p>{scriptArray[i]}</p>
+                        </div>
+                    {/each}
                 </div>
             </div>
             <div class="download-box">
@@ -101,47 +94,22 @@
     </section>
 {/if}
 {#if isTablet}
-    <section id="download" class="bg-gray">
+    <section id="download" class="bg-white">
         <div class="container-mb">
             <div class="role-mb">
                 <h1>DOWNLOAD</h1>
                 <div class="role-box-mb">
-                    <div>
-                        <img
-                            class="role-box-image"
-                            src="images/sample1.jpg"
-                            alt="role"
-                        />
-                        <h2>Lorem ipsum</h2>
-                        <p>dolor sit amet, consectetur</p>
-                    </div>
-                    <div>
-                        <img
-                            class="role-box-image"
-                            src="images/sample2.png"
-                            alt="role"
-                        />
-                        <h2>Lorem ipsum</h2>
-                        <p>dolor sit amet, consectetur</p>
-                    </div>
-                    <div>
-                        <img
-                            class="role-box-image"
-                            src="images/sample3.jpg"
-                            alt="role"
-                        />
-                        <h2>Lorem ipsum</h2>
-                        <p>dolor sit amet, consectetur</p>
-                    </div>
-                    <div>
-                        <img
-                            class="role-box-image"
-                            src="images/sample1.jpg"
-                            alt="role"
-                        />
-                        <h2>Lorem ipsum</h2>
-                        <p>dolor sit amet, consectetur</p>
-                    </div>
+                    {#each titleArray as title, i}
+                        <div>
+                            <img
+                                class="role-box-image"
+                                src={imageArray[i]}
+                                alt="role"
+                            />
+                            <h2>{title}</h2>
+                            <p>{scriptArray[i]}</p>
+                        </div>
+                    {/each}
                 </div>
             </div>
             <div class="download-box-mb">
@@ -203,6 +171,9 @@
         height: 200px;
         object-fit: cover;
     }
+    .role-box div {
+        max-width: 200px;
+    }
     .download-box {
         display: flex;
         justify-content: center;
@@ -232,10 +203,10 @@
 
     /* for mobile/tablet */
 
-    .bg-gray {
+    /* .bg-gray {
         background-color: #eeeeee;
         margin: 0 auto;
-    }
+    } */
     .container-mb {
         /* padding-top: 70px; */
         width: 100%;
@@ -273,7 +244,7 @@
         justify-content: center;
         align-items: center;
         /* background-color: white; */
-        background-color: #32c7ff;
+        background-color: white;
         border: 3px solid #32c7ff;
         border-radius: 30px;
         /* margin-bottom: 6em; */
