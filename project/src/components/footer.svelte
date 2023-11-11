@@ -40,7 +40,7 @@
     <section id="footer-info" class="bg-gray">
         <div class="container">
             <div class="left-container">
-                <div class="slogan">Lorem, ipsum dolor</div>
+                <div class="slogan">MoriMori</div>
                 <div class="logo">
                     <img
                         class="nav-logo"
@@ -76,7 +76,7 @@
     <section id="footer-info" class="bg-gray">
         <div class="container-mb">
             <div class="down-container-mb">
-                <div class="slogan-mb">Lorem, ipsum dolor</div>
+                <div class="slogan-mb">MoriMori</div>
                 <div class="logo-mb">
                     <img
                         class="nav-logo-mb"

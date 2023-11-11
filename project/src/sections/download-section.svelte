@@ -8,13 +8,13 @@
     let isTablet = false;
     let titleArray = [
         "다양한 이벤트",
-        "무단학습 방지",
+        "AI 무단학습 억제연구",
         "SNS 연동",
         "플랫폼 지원",
     ];
     let scriptArray = [
         "MoriMori의 즐거운 이벤트와 함께하세요!",
-        "그림 무단학습 방지 환경에서 걱정없이 즐기세요!",
+        "MoriMori는 그림 무단학습 억제를 위해 최선을 다 하고 있어요!",
         "게시한 내용을 다양한 SNS를 통해 공유하세요!",
         "다양한 플랫폼으로 MoriMori를 즐겨보세요!",
     ];
@@ -74,7 +74,7 @@
                     alt="app-logo"
                 />
                 <div>
-                    <h2>Download now!</h2>
+                    <h2>지금 다운로드하세요!</h2>
                     <div class="badges">
                         <img
                             class="store-badge"
@@ -119,7 +119,7 @@
                     alt="app-logo"
                 />
                 <div>
-                    <h2>Download now!</h2>
+                    <h2>지금 다운로드하세요!</h2>
                     <div class="badges-mb">
                         <img
                             class="store-badge-mb"
@@ -174,6 +174,10 @@
     }
     .role-box div {
         max-width: 200px;
+    }
+
+    .role-box div h2 {
+        font-size: 20px;
     }
     .download-box {
         display: flex;
@@ -232,6 +236,10 @@
     .role-box-mb div {
         flex: 1 0 calc(50% - 10px); /* flex-grow, flex-shrink, flex-basis */
         margin: 5px;
+    }
+
+    .role-box-mb div h2 {
+        font-size: 20px;
     }
 
     .role-box-image {

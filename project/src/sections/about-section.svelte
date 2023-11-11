@@ -6,12 +6,14 @@
     let characterY = 0;
     const moveRatio = 0.01;
     let isTablet = false;
-    let titleArray = ["투고하세요,", "소통하세요,", "제안하세요,"];
+    let titleArray = ["투고하세요,", "소통하세요,", "참가하세요,"];
     let scriptArray = [
         "내 작품을 MoriMori에 투고해서 많은 사람들에게 보여주세요!",
         "MoriMori의 많은 사람들과 함께 즐거운 추억을 만들어가세요!",
-        "MoriMori의 새로운 기능, 원하는 기능을 자유롭게 제안하세요!",
+        "MoriMori에서 다양한 대회에 참가하세요!",
     ];
+
+    //제안하세요: 유저개선사항을 잘 개선해주는 당 플랫폼의 장점을 강조
 
     if (!isTablet) {
         function handleMouseMove(event) {
