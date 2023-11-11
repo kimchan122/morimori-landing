@@ -180,7 +180,8 @@
 
     .phone-image {
         /* width: 100%; */
-        max-width: 400px;
+        width: 400px;
+        height: 670px;
         object-fit: contain;
         /* padding: 0px 30px 0px 30px; */
         box-sizing: border-box;
