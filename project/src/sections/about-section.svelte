@@ -130,9 +130,10 @@
         /* height: calc(100vh - 70px - 6em); */
         max-width: 1080px;
         margin: 0 auto;
-        padding: 70px 0 70px 0;
+        padding: 70px 20px 70px 20px;
         display: flex;
         justify-content: space-between;
+        box-sizing: border-box;
     }
 
     .about-element {

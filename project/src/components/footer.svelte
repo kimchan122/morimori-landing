@@ -145,9 +145,10 @@
         /* height: calc(100vh - 70px); */
         max-width: 1080px;
         margin: 0 auto;
-        padding: 6em 0;
+        padding: 70px 20px;
         display: flex;
         justify-content: space-between;
+        box-sizing: border-box;
     }
 
     .left-container {

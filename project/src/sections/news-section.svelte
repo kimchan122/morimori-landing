@@ -142,10 +142,11 @@
         width: 100%;
         max-width: 1080px;
         margin: 0 auto;
-        padding: 70px 0 70px 0;
+        padding: 70px 20px 70px 20px;
         display: flex;
         flex-direction: column;
         color: black;
+        box-sizing: border-box;
     }
     .role {
         padding-bottom: 6em;
