@@ -222,10 +222,10 @@
         outline: none;
         transition: color 0.3s ease;
         line-height: 0px;
-    }
 
-    .button-container:hover {
-        color: white;
+        &:hover {
+            color: white;
+        }
     }
 
     .button-container-white {
@@ -237,10 +237,10 @@
         outline: none;
         transition: color 0.3s ease;
         line-height: 0px;
-    }
 
-    .button-container-white:hover {
-        color: #ffdaa3;
+        &:hover {
+            color: #ffdaa3;
+        }
     }
 
     .logo-container {
