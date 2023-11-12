@@ -14,15 +14,15 @@
     ];
     let scriptArray = [
         "MoriMori의 즐거운 이벤트와 함께하세요!",
-        "MoriMori는 그림 무단학습 억제를 위해 최선을 다 하고 있어요!",
-        "게시한 내용을 다양한 SNS를 통해 공유하세요!",
-        "다양한 플랫폼으로 MoriMori를 즐겨보세요!",
+        "MoriMori의 그림 무단학습 억제 정책과 함께하세요!",
+        "MoriMori에 게시한 내용을 다양한 SNS를 통해 공유하세요!",
+        "다양한 기기로 MoriMori를 즐겨보세요!",
     ];
     let imageArray = [
-        "images/sample1.jpg",
-        "images/sample2.png",
-        "images/sample3.jpg",
-        "images/sample1.jpg",
+        "images/download01.png",
+        "images/download02.png",
+        "images/download03.png",
+        "images/download04.png",
     ];
 
     if (!isTablet) {
@@ -56,11 +56,13 @@
                 <div class="role-box">
                     {#each titleArray as title, i}
                         <div>
-                            <img
-                                class="role-box-image"
-                                src={imageArray[i]}
-                                alt="role"
-                            />
+                            <div class="role-box-image-container">
+                                <img
+                                    class="role-box-image"
+                                    src={imageArray[i]}
+                                    alt="role"
+                                />
+                            </div>
                             <h2>{title}</h2>
                             <p>{scriptArray[i]}</p>
                         </div>
@@ -94,7 +96,7 @@
     </section>
 {/if}
 {#if isTablet}
-    <section id="download" class="bg-white">
+    <section id="download" class="bg-white-mb">
         <div class="container-mb">
             <div class="role-mb">
                 <h1>DOWNLOAD</h1>
@@ -102,7 +104,7 @@
                     {#each titleArray as title, i}
                         <div>
                             <img
-                                class="role-box-image"
+                                class="role-box-image-mb"
                                 src={imageArray[i]}
                                 alt="role"
                             />
@@ -167,10 +169,21 @@
         display: flex;
         justify-content: space-between;
     }
+    .role-box-image-container {
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+    }
     .role-box-image {
         width: 200px;
         height: 200px;
         object-fit: cover;
+        overflow: hidden;
+        transform-origin: center center;
+        transition: transform 0.3s ease-in-out;
+    }
+    .role-box-image:hover {
+        transform: scale(1.2);
     }
     .role-box div {
         max-width: 200px;
@@ -185,7 +198,7 @@
         align-items: center;
         background-color: white;
         /* background-color: #32c7ff; */
-        border: 3px solid #32c7ff;
+        border: 3px solid #ffdaa3;
         border-radius: 30px;
         margin-bottom: 6em;
     }
@@ -208,6 +221,10 @@
 
     /* for mobile/tablet */
 
+    .bg-white-mb {
+        background-color: white;
+        height: 0 auto;
+    }
     /* .bg-gray {
         background-color: #eeeeee;
         margin: 0 auto;
@@ -242,7 +259,7 @@
         font-size: 20px;
     }
 
-    .role-box-image {
+    .role-box-image-mb {
         width: 200px;
         height: 200px;
         object-fit: cover;
@@ -254,7 +271,7 @@
         align-items: center;
         /* background-color: white; */
         background-color: white;
-        border: 3px solid #32c7ff;
+        border: 3px solid #ffdaa3;
         border-radius: 30px;
         /* margin-bottom: 6em; */
         padding: 30px 30px;
@@ -268,8 +285,8 @@
             justify-content: center;
             align-items: center;
             /* background-color: white; */
-            background-color: #32c7ff;
-            border: 3px solid #32c7ff;
+            background-color: #ffdaa3;
+            border: 3px solid #ffdaa3;
             border-radius: 30px;
             /* margin-bottom: 6em; */
             padding: 30px 30px;

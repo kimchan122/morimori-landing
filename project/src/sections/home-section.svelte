@@ -56,7 +56,7 @@
 </script>
 
 {#if !isTablet}
-    <section id="main" class="bg-lightblue">
+    <section id="main" class="bg-color">
         <div class="top-container">
             <img
                 class="phone-image"
@@ -97,7 +97,7 @@
     <section class="bg-white" />
 {/if}
 {#if isTablet}
-    <section id="main" class="bg-lightblue-mb">
+    <section id="main" class="bg-color-mb">
         <div class="top-container-mb">
             <div class="intro-mb">
                 <div>
@@ -150,8 +150,8 @@
         background-color: white;
         height: 150px;
     }
-    .bg-lightblue {
-        background-color: #32c7ff;
+    .bg-color {
+        background-color: #ffdaa3;
         height: 600px;
     }
     .top-container {
@@ -272,8 +272,8 @@
         background-color: white;
         height: 150px;
     } */
-    .bg-lightblue-mb {
-        background-color: #32c7ff;
+    .bg-color-mb {
+        background-color: #ffdaa3;
         /* height: 600px; */
     }
     .top-container-mb {

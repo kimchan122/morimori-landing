@@ -149,7 +149,7 @@
     }
 
     .element-title {
-        background: linear-gradient(transparent 70%, #54caff 0%);
+        background: linear-gradient(transparent 80%, #ffdaa3 0%);
     }
 
     .element-script {
@@ -186,7 +186,7 @@
     }
 
     .element-title-mb {
-        background: linear-gradient(transparent 70%, #54caff 0%);
+        background: linear-gradient(transparent 80%, #ffdaa3 0%);
     }
 
     .element-script-mb {

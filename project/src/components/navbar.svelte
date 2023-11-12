@@ -173,7 +173,7 @@
         z-index: 100;
         width: 100%;
         height: 70px;
-        background-color: #32c7ff;
+        background-color: #ffdaa3;
 
         display: flex;
         justify-content: center;
@@ -240,7 +240,7 @@
     }
 
     .button-container-white:hover {
-        color: #32c7ff;
+        color: #ffdaa3;
     }
 
     .logo-container {
