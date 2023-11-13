@@ -74,6 +74,7 @@
                 src="images/home-horizontal2.png"
                 alt="home-horizontal"
             />
+
             <div use:reveal={{ transition: "fade", delay: 100 }} class="intro">
                 <div>
                     <div class="slogan-third">

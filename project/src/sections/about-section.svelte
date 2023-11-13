@@ -7,12 +7,18 @@
     let characterY = 0;
     const moveRatio = 0.01;
     let isTablet = false;
-    let titleArray = ["투고하세요,", "소통하세요,", "참가하세요,"];
+    let titleArray = ["ATELIER", "AREA", "FIESTA"];
     let scriptArray = [
-        "내 작품을 MoriMori에 투고해서 많은 사람들에게 보여주세요!",
-        "MoriMori의 많은 사람들과 함께 즐거운 추억을 만들어가세요!",
-        "MoriMori에서 다양한 대회에 참가하세요!",
+        "여러분의 소중히 작품을 모아 포트폴리오로 누구에게나 보여주세요!",
+        "창작자, 소비자가 모두 모여 자유롭게 소통해봐요!",
+        "대회를 개최하여 작품을 받아보고, 작가님을 후원해봐요!",
     ];
+    // let titleArray = ["투고하세요,", "소통하세요,", "참가하세요,"];
+    // let scriptArray = [
+    //     "내 작품을 MoriMori에 투고해서 많은 사람들에게 보여주세요!",
+    //     "MoriMori의 많은 사람들과 함께 즐거운 추억을 만들어가세요!",
+    //     "MoriMori에서 다양한 대회에 참가하세요!",
+    // ];
 
     let isInView = false;
     const options = {
