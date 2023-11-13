@@ -62,11 +62,13 @@
                     <div class="element-title">
                         <h2>{title}</h2>
                     </div>
-                    <img
-                        class="about-image"
-                        src="images/about-image.png"
-                        alt="home-horizontal"
-                    />
+                    <div class="about-image-conatiner">
+                        <img
+                            class="about-image"
+                            src="images/about-image.png"
+                            alt="home-horizontal"
+                        />
+                    </div>
                     <div class="element-script">
                         {scriptArray[i]}
                     </div>
@@ -126,13 +128,31 @@
     }
 
     .about-element {
-        max-width: 300px;
+        width: 300px;
         /* display: flex; */
         color: black;
     }
 
-    .about-element img {
+    .about-image-conatiner {
         width: 300px;
+        height: 230px;
+        overflow: hidden;
+    }
+
+    .about-image {
+        width: 300px;
+        height: 230px;
+        object-fit: cover;
+        overflow: hidden;
+        transform-origin: center center;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .about-image:hover {
+        width: 300px;
+        height: 230px;
+        transform: scale(1.2);
+        overflow: hidden;
     }
 
     .element-title {
