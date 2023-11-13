@@ -1,11 +1,16 @@
 <script>
     import { onMount } from "svelte";
     import { reveal } from "svelte-reveal";
+    import { inview } from "svelte-inview";
 
     let characterX = 0;
     let characterY = 0;
     const moveRatio = 0.01;
     let isTablet = false;
+    let isInView = false;
+    const options = {
+        unobserveOnEnter: false,
+    };
     let titleArray = [
         "다양한 이벤트",
         "AI 무단학습 억제연구",
@@ -49,13 +54,24 @@
 </script>
 
 {#if !isTablet}
-    <section id="download" class="bg-white">
+    <section
+        id="download"
+        class="bg-white"
+        use:inview={options}
+        on:inview_change={(event) => {
+            const { inView, entry, scrollDirection, observer, node } =
+                event.detail;
+            isInView = inView;
+        }}
+    >
         <div class="container">
             <div class="role">
-                <h1>DOWNLOAD</h1>
+                <h1 use:reveal={{ transition: "fade", delay: 0 }}>DOWNLOAD</h1>
                 <div class="role-box">
                     {#each titleArray as title, i}
-                        <div>
+                        <div
+                            use:reveal={{ transition: "fade", delay: i * 100 }}
+                        >
                             <div class="role-box-image-container">
                                 <img
                                     class="role-box-image"
@@ -69,15 +85,24 @@
                     {/each}
                 </div>
             </div>
-            <div class="download-box">
+            <div
+                class="download-box"
+                use:reveal={{ transition: "fade", delay: 400 }}
+            >
                 <img
                     class="app-logo"
                     src="images/app-logo.png"
                     alt="app-logo"
+                    use:reveal={{ transition: "fade", delay: 500 }}
                 />
                 <div>
-                    <h2>지금 다운로드하세요!</h2>
-                    <div class="badges">
+                    <h2 use:reveal={{ transition: "fade", delay: 600 }}>
+                        지금 다운로드하세요!
+                    </h2>
+                    <div
+                        class="badges"
+                        use:reveal={{ transition: "fade", delay: 700 }}
+                    >
                         <img
                             class="store-badge"
                             src="images/google-play-badge.png"
@@ -96,13 +121,24 @@
     </section>
 {/if}
 {#if isTablet}
-    <section id="download" class="bg-white-mb">
+    <section
+        id="download"
+        class="bg-white-mb"
+        use:inview={options}
+        on:inview_change={(event) => {
+            const { inView, entry, scrollDirection, observer, node } =
+                event.detail;
+            isInView = inView;
+        }}
+    >
         <div class="container-mb">
             <div class="role-mb">
-                <h1>DOWNLOAD</h1>
+                <h1 use:reveal={{ transition: "fade", delay: 0 }}>DOWNLOAD</h1>
                 <div class="role-box-mb">
                     {#each titleArray as title, i}
-                        <div>
+                        <div
+                            use:reveal={{ transition: "fade", delay: i * 100 }}
+                        >
                             <img
                                 class="role-box-image-mb"
                                 src={imageArray[i]}
@@ -114,15 +150,24 @@
                     {/each}
                 </div>
             </div>
-            <div class="download-box-mb">
+            <div
+                class="download-box-mb"
+                use:reveal={{ transition: "fade", delay: 400 }}
+            >
                 <img
                     class="app-logo-mb"
                     src="images/app-logo.png"
                     alt="app-logo"
+                    use:reveal={{ transition: "fade", delay: 500 }}
                 />
                 <div>
-                    <h2>지금 다운로드하세요!</h2>
-                    <div class="badges-mb">
+                    <h2 use:reveal={{ transition: "fade", delay: 600 }}>
+                        지금 다운로드하세요!
+                    </h2>
+                    <div
+                        class="badges-mb"
+                        use:reveal={{ transition: "fade", delay: 700 }}
+                    >
                         <img
                             class="store-badge-mb"
                             src="images/google-play-badge.png"

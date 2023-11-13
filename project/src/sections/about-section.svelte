@@ -43,10 +43,22 @@
 </script>
 
 {#if !isTablet}
-    <section id="about" class="bg-white">
+    <section
+        id="about"
+        class="bg-white"
+        use:inview={options}
+        on:inview_change={(event) => {
+            const { inView, entry, scrollDirection, observer, node } =
+                event.detail;
+            isInView = inView;
+        }}
+    >
         <div class="container">
             {#each titleArray as title, i}
-                <div class="about-element">
+                <div
+                    use:reveal={{ transition: "fade", delay: i * 100 }}
+                    class="about-element"
+                >
                     <div class="element-title">
                         <h2>{title}</h2>
                     </div>
@@ -60,54 +72,26 @@
                     </div>
                 </div>
             {/each}
-            <!-- <div class="about-element">
-                <div class="element-title">
-                    <h2>Lorem ipsum dolor</h2>
-                </div>
-                <img
-                    class="about-image"
-                    src="images/about-image.png"
-                    alt="home-horizontal"
-                />
-                <div class="element-script">
-                    Lorem ipsum dolor sit amet, adipiscing elit consectetur
-                </div>
-            </div>
-            <div class="about-element">
-                <div class="element-title">
-                    <h2>Lorem ipsum dolor</h2>
-                </div>
-                <img
-                    class="about-image"
-                    src="images/about-image.png"
-                    alt="home-horizontal"
-                />
-                <div class="element-script">
-                    Lorem ipsum dolor sit amet, adipiscing elit consectetur
-                </div>
-            </div>
-            <div class="about-element">
-                <div class="element-title">
-                    <h2>Lorem ipsum dolor</h2>
-                </div>
-                <img
-                    class="about-image"
-                    src="images/about-image.png"
-                    alt="home-horizontal"
-                />
-                <div class="element-script">
-                    Lorem ipsum dolor sit amet, adipiscing elit consectetur
-                </div>
-            </div> -->
         </div>
-        <!-- <div id="about" class="desktop-section-container" /> -->
     </section>
 {/if}
 {#if isTablet}
-    <section id="about" class="bg-white">
+    <section
+        id="about"
+        class="bg-white"
+        use:inview={options}
+        on:inview_change={(event) => {
+            const { inView, entry, scrollDirection, observer, node } =
+                event.detail;
+            isInView = inView;
+        }}
+    >
         <div class="container-mb">
             {#each titleArray as title, i}
-                <div class="about-element-mb">
+                <div
+                    use:reveal={{ transition: "fade", delay: i * 100 }}
+                    class="about-element-mb"
+                >
                     <div class="element-title-mb">
                         <h2>{title}</h2>
                     </div>
@@ -122,7 +106,6 @@
                 </div>
             {/each}
         </div>
-        <!-- <div id="about" class="desktop-section-container" /> -->
     </section>
 {/if}
 

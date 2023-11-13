@@ -69,12 +69,12 @@
     >
         <div class="top-container">
             <img
-                use:reveal={{ delay: 0 }}
+                use:reveal={{ transition: "fade", delay: 0 }}
                 class="phone-image"
                 src="images/home-horizontal2.png"
                 alt="home-horizontal"
             />
-            <div use:reveal={{ delay: 50 }} class="intro">
+            <div use:reveal={{ transition: "fade", delay: 100 }} class="intro">
                 <div>
                     <div class="slogan-third">
                         {mainText[0]}
@@ -89,7 +89,10 @@
                     <!-- <span class="slogan-doit">하세요</span> -->
                     <!-- <span class="slogan-first-doit">하세요</span> -->
                 </div>
-                <div use:reveal={{ delay: 100 }} class="badges">
+                <div
+                    use:reveal={{ transition: "fade", delay: 200 }}
+                    class="badges"
+                >
                     <img
                         class="store-badge"
                         src="images/google-play-badge.png"
@@ -110,10 +113,19 @@
     <section class="bg-white" />
 {/if}
 {#if isTablet}
-    <section id="main" class="bg-color-mb">
+    <section
+        id="main"
+        class="bg-color-mb"
+        use:inview={options}
+        on:inview_change={(event) => {
+            const { inView, entry, scrollDirection, observer, node } =
+                event.detail;
+            isInView = inView;
+        }}
+    >
         <div class="top-container-mb">
             <div class="intro-mb">
-                <div>
+                <div use:reveal={{ transition: "fade", delay: 0 }}>
                     <div class="slogan-third-mb">
                         {mainText[0]}
                     </div>
@@ -125,7 +137,10 @@
                     <!-- <span class="slogan-doit-mb">하세요</span> -->
                     <!-- <span class="slogan-first-doit-mb">하세요</span> -->
                 </div>
-                <div class="badges-mb">
+                <div
+                    class="badges-mb"
+                    use:reveal={{ transition: "fade", delay: 100 }}
+                >
                     <img
                         class="store-badge-mb"
                         src="images/google-play-badge.png"
@@ -149,6 +164,7 @@
                 </div> -->
             </div>
             <img
+                use:reveal={{ transition: "fade", delay: 200 }}
                 class="phone-image-mb"
                 src="images/home-mb.png"
                 alt="home-horizontal"

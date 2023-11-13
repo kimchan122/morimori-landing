@@ -50,17 +50,20 @@
                 </div>
                 <div class="platform-badges">
                     <!-- <Icon src={BsDiscord} color="#333333" size="32" /> -->
-                    <Icon src={BsYoutube} color="#333333" size="32" />
+                    <!-- <Icon src={BsYoutube} color="#333333" size="32" /> -->
                     <!-- <Icon src={BsLinkedin} color="#333333" size="32" /> -->
                     <!-- <Icon src={BsInstagram} color="#333333" size="32" /> -->
                 </div>
             </div>
             <div class="right-box">
                 <div class="right-container-links">
-                    <!-- <a>Discord</a>
-                    <a>Youtube</a>
-                    <a>Linkedin</a>
-                    <a>Instagram</a> -->
+                    <!-- <a>Discord</a> -->
+                    <a
+                        href="https://www.youtube.com/@MoriChanneru"
+                        target="_blank">Youtube</a
+                    >
+                    <!-- <a>Linkedin</a> -->
+                    <!-- <a>Instagram</a> -->
                 </div>
                 <div class="right-container">
                     <!-- <a>앱 정보</a>
@@ -86,25 +89,28 @@
                 </div>
                 <div class="platform-badges-mb">
                     <!-- <Icon src={BsDiscord} color="#333333" size="32" /> -->
-                    <Icon src={BsYoutube} color="#333333" size="32" />
+                    <!-- <Icon src={BsYoutube} color="#333333" size="32" /> -->
                     <!-- <Icon src={BsLinkedin} color="#333333" size="32" /> -->
                     <!-- <Icon src={BsInstagram} color="#333333" size="32" /> -->
                 </div>
             </div>
-            <!-- <div class="right-box">
+            <div class="right-box">
                 <div class="right-container-links">
-                    <a>Discord</a>
-                    <a>Youtube</a>
-                    <a>Linkedin</a>
-                    <a>Instagram</a>
+                    <!-- <a>Discord</a> -->
+                    <a
+                        href="https://www.youtube.com/@MoriChanneru"
+                        target="_blank">Youtube</a
+                    >
+                    <!-- <a>Linkedin</a> -->
+                    <!-- <a>Instagram</a> -->
                 </div>
-                <div class="right-container">
+                <!-- <div class="right-container">
                     <a>앱 정보</a>
                     <a>회사 개요</a>
                     <a>뉴스</a>
                     <a>자주 묻는 질문</a>
-                </div>
-            </div> -->
+                </div> -->
+            </div>
         </div>
     </section>
 {/if}
@@ -203,12 +209,12 @@
         flex-direction: column;
     }
 
-    /* .right-container-links a {
+    .right-container-links a {
         text-align: left;
         color: black;
         margin-bottom: 20px;
         text-decoration: underline;
-    } */
+    }
 
     .right-container {
         display: flex;
@@ -292,7 +298,6 @@
         align-items: center;
         justify-content: space-between;
     }
-    /* 
     .right-box {
         display: flex;
         gap: 60px;
@@ -315,7 +320,7 @@
         flex-direction: column;
     }
 
-    .right-container a {
+    /* .right-container a {
         text-align: left;
         color: black;
         margin-bottom: 20px;

@@ -1,6 +1,7 @@
 <script>
     import { onMount } from "svelte";
     import { reveal } from "svelte-reveal";
+    import { inview } from "svelte-inview";
     import Carousel from "svelte-carousel";
 
     let characterX = 0;
@@ -8,6 +9,10 @@
     let particlesNumber = 3;
     const moveRatio = 0.01;
     let isTablet = false;
+    let isInView = false;
+    const options = {
+        unobserveOnEnter: false,
+    };
 
     if (!isTablet) {
         function handleMouseMove(event) {
@@ -59,44 +64,64 @@
 </script>
 
 {#if !isTablet}
-    <section id="news" class="bg-white">
+    <section
+        id="news"
+        class="bg-white"
+        use:inview={options}
+        on:inview_change={(event) => {
+            const { inView, entry, scrollDirection, observer, node } =
+                event.detail;
+            isInView = inView;
+        }}
+    >
         <div class="container">
             <div class="role">
-                <h1>NEWS</h1>
+                <h1 use:reveal={{ transition: "fade", delay: 0 }}>NEWS</h1>
 
-                <Carousel
-                    particlesToShow={3}
-                    particlesToScroll={1}
-                    autoplay
-                    autoplayDuration={4000}
-                    dots={false}
-                >
-                    {#each newsItems as item (item.image)}
-                        <div class="carousel-box">
-                            <div class="carousel-element">
-                                <img
-                                    class="news-image"
-                                    src={item.image}
-                                    alt=""
-                                />
-                                <div class="news-text">
-                                    <h3 class="news-title">
-                                        {item.title}
-                                    </h3>
-                                    <p class="news-script">
-                                        {item.description}
-                                    </p>
+                <div use:reveal={{ transition: "fade", delay: 100 }}>
+                    <Carousel
+                        particlesToShow={3}
+                        particlesToScroll={1}
+                        autoplay
+                        autoplayDuration={4000}
+                        dots={false}
+                    >
+                        {#each newsItems as item (item.image)}
+                            <div class="carousel-box">
+                                <div class="carousel-element">
+                                    <img
+                                        class="news-image"
+                                        src={item.image}
+                                        alt=""
+                                    />
+                                    <div class="news-text">
+                                        <h3 class="news-title">
+                                            {item.title}
+                                        </h3>
+                                        <p class="news-script">
+                                            {item.description}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    {/each}
-                </Carousel>
+                        {/each}
+                    </Carousel>
+                </div>
             </div>
         </div>
     </section>
 {/if}
 {#if isTablet}
-    <section id="news" class="bg-white">
+    <section
+        id="news"
+        class="bg-white"
+        use:inview={options}
+        on:inview_change={(event) => {
+            const { inView, entry, scrollDirection, observer, node } =
+                event.detail;
+            isInView = inView;
+        }}
+    >
         <div class="container-mb">
             <div class="role-mb">
                 <h1>NEWS</h1>
