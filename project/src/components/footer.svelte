@@ -1,12 +1,12 @@
 <script>
     import { onMount } from "svelte";
-    import { reveal } from "svelte-reveal";
-    import Icon from "svelte-icons-pack/Icon.svelte";
-    import BsDiscord from "svelte-icons-pack/bs/BsDiscord";
-    import BsYoutube from "svelte-icons-pack/bs/BsYoutube";
-    import BsLinkedin from "svelte-icons-pack/bs/BsLinkedin";
-    import BsInstagram from "svelte-icons-pack/bs/BsInstagram";
-    import AiFillLinkedin from "svelte-icons-pack/ai/AiFillLinkedin";
+    // import { reveal } from "svelte-reveal";
+    // import Icon from "svelte-icons-pack/Icon.svelte";
+    // import BsDiscord from "svelte-icons-pack/bs/BsDiscord";
+    // import BsYoutube from "svelte-icons-pack/bs/BsYoutube";
+    // import BsLinkedin from "svelte-icons-pack/bs/BsLinkedin";
+    // import BsInstagram from "svelte-icons-pack/bs/BsInstagram";
+    // import AiFillLinkedin from "svelte-icons-pack/ai/AiFillLinkedin";
 
     let characterX = 0;
     let characterY = 0;
@@ -65,12 +65,12 @@
                     <!-- <a>Linkedin</a> -->
                     <!-- <a>Instagram</a> -->
                 </div>
-                <div class="right-container">
-                    <!-- <a>앱 정보</a>
+                <!-- <div class="right-container"> -->
+                <!-- <a>앱 정보</a>
                     <a>회사 개요</a>
                     <a>뉴스</a>
                     <a>자주 묻는 질문</a> -->
-                </div>
+                <!-- </div> -->
             </div>
         </div>
     </section>
@@ -134,99 +134,80 @@
     </footer>
 {/if}
 
-<style>
+<style lang="scss">
+    /* desktop */
     .bg-gray {
         background-color: #eeeeee;
         margin: 0 auto;
     }
-    .bg-darkgray {
-        background-color: #1f1f1f;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-    }
+
     .container {
         padding-top: 70px;
         width: 100%;
-        /* height: calc(100vh - 70px); */
         max-width: 1080px;
         margin: 0 auto;
         padding: 70px 20px;
         display: flex;
         justify-content: space-between;
         box-sizing: border-box;
+
+        .left-container {
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+
+            .slogan {
+                text-align: left;
+                color: black;
+                font-weight: 900;
+                font-size: 24px;
+            }
+            .logo {
+                display: flex;
+                justify-content: flex-start;
+
+                .nav-logo {
+                    max-height: 100px;
+                }
+            }
+            .platform-badges {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+        .right-box {
+            display: flex;
+            gap: 60px;
+
+            .right-container-links {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .right-container-links a {
+                text-align: left;
+                color: black;
+                margin-bottom: 20px;
+                text-decoration: underline;
+            }
+
+            .right-container {
+                display: flex;
+                flex-direction: column;
+            }
+        }
     }
 
-    .left-container {
-        width: 200px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-
-    .slogan {
-        text-align: left;
-        color: black;
-        font-weight: 900;
-        font-size: 24px;
-    }
-
-    .logo {
-        /* max-height: 80px; */
-        display: flex;
-        /* flex-direction: column; */
-        justify-content: flex-start;
-    }
-
-    .nav-logo {
-        max-height: 100px;
-    }
-
-    /* .badges {
+    .bg-darkgray {
+        background-color: #1f1f1f;
+        margin: 0 auto;
         display: flex;
         justify-content: center;
-        align-items: center;
-        gap: 20px;
     }
 
-    .store-badge {
-        width: 200px;
-    } */
-
-    .platform-badges {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .right-box {
-        display: flex;
-        gap: 60px;
-    }
-
-    .right-container-links {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .right-container-links a {
-        text-align: left;
-        color: black;
-        margin-bottom: 20px;
-        text-decoration: underline;
-    }
-
-    .right-container {
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* .right-container a {
-        text-align: left;
-        color: black;
-        margin-bottom: 20px;
-    } */
-
+    /* footer */
     .footer {
         width: 100%;
         max-width: 980px;
@@ -235,19 +216,26 @@
         display: flex;
         align-items: center;
         color: white;
+
+        div {
+            margin-right: 50px;
+        }
+    }
+    .footer-mb {
+        width: 100%;
+        background-color: #1f1f1f;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+        color: white;
+        padding: 10px 0;
     }
 
-    .footer div {
-        margin-right: 50px;
-    }
-
-    /* for mobile/tablet */
+    /* mobile */
 
     .container-mb {
-        /* padding-top: 70px; */
         width: 100%;
-        /* height: calc(100vh - 70px); */
-        /* max-width: 1080px; */
         margin: 0 auto;
         padding: 6em 50px;
         display: flex;
@@ -271,27 +259,13 @@
     }
 
     .logo-mb {
-        /* max-height: 80px; */
         display: flex;
-        /* flex-direction: column; */
-        /* align-items: center; */
         justify-content: center;
     }
 
     .nav-logo-mb {
         max-height: 100px;
     }
-
-    /* .badges {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .store-badge {
-        width: 200px;
-    } */
 
     .platform-badges-mb {
         display: flex;
@@ -318,24 +292,5 @@
     .right-container {
         display: flex;
         flex-direction: column;
-    }
-
-    /* .right-container a {
-        text-align: left;
-        color: black;
-        margin-bottom: 20px;
-    } */
-
-    .footer-mb {
-        width: 100%;
-        /* max-width: 980px; */
-        background-color: #1f1f1f;
-        /* height: 50px; */
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        align-items: center;
-        color: white;
-        padding: 10px 0;
     }
 </style>
