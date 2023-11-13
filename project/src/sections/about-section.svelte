@@ -1,6 +1,7 @@
 <script>
     import { onMount } from "svelte";
     import { reveal } from "svelte-reveal";
+    import { inview } from "svelte-inview";
 
     let characterX = 0;
     let characterY = 0;
@@ -13,7 +14,10 @@
         "MoriMori에서 다양한 대회에 참가하세요!",
     ];
 
-    //제안하세요: 유저개선사항을 잘 개선해주는 당 플랫폼의 장점을 강조
+    let isInView = false;
+    const options = {
+        unobserveOnEnter: false,
+    };
 
     if (!isTablet) {
         function handleMouseMove(event) {

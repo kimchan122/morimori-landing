@@ -17,6 +17,7 @@
   "dependencies": {
     "svelte-carousel": "^1.0.25",
     "svelte-icons-pack": "^2.1.0",
+    "svelte-inview": "^4.0.1",
     "svelte-reveal": "^0.7.0",
     "svelte-routing": "^2.5.0"
   }

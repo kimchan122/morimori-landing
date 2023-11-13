@@ -49,10 +49,10 @@
                     />
                 </div>
                 <div class="platform-badges">
-                    <Icon src={BsDiscord} color="#333333" size="32" />
+                    <!-- <Icon src={BsDiscord} color="#333333" size="32" /> -->
                     <Icon src={BsYoutube} color="#333333" size="32" />
-                    <Icon src={BsLinkedin} color="#333333" size="32" />
-                    <Icon src={BsInstagram} color="#333333" size="32" />
+                    <!-- <Icon src={BsLinkedin} color="#333333" size="32" /> -->
+                    <!-- <Icon src={BsInstagram} color="#333333" size="32" /> -->
                 </div>
             </div>
             <div class="right-box">
@@ -85,10 +85,10 @@
                     />
                 </div>
                 <div class="platform-badges-mb">
-                    <Icon src={BsDiscord} color="#333333" size="32" />
+                    <!-- <Icon src={BsDiscord} color="#333333" size="32" /> -->
                     <Icon src={BsYoutube} color="#333333" size="32" />
-                    <Icon src={BsLinkedin} color="#333333" size="32" />
-                    <Icon src={BsInstagram} color="#333333" size="32" />
+                    <!-- <Icon src={BsLinkedin} color="#333333" size="32" /> -->
+                    <!-- <Icon src={BsInstagram} color="#333333" size="32" /> -->
                 </div>
             </div>
             <!-- <div class="right-box">
@@ -152,7 +152,7 @@
     }
 
     .left-container {
-        max-width: 400px;
+        width: 200px;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;

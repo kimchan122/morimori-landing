@@ -1,3 +1,8 @@
+
+window.onload = () => {
+  window.scrollTo(0, 0);
+};
+
 import './app.css'
 import App from './App.svelte'
 

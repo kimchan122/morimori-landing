@@ -1,17 +1,18 @@
 <script>
     import { onMount } from "svelte";
     import { reveal } from "svelte-reveal";
+    import { inview } from "svelte-inview";
 
-    let characterX = 0;
-    let characterY = 0;
-    const moveRatio = 0.01;
     let isTablet = false;
-
+    let isInView = false;
+    const options = {
+        unobserveOnEnter: false,
+    };
     let mainText = [
         "창작자도 소비자도 함께하는 플랫폼",
         "MoriMori와 함께하세요,",
     ];
-    let textArray = ["투고", "소통", "제안"];
+    let textArray = ["투고", "소통", "참가"];
     let currentIndex = 0;
     let isFadingOut = false;
 
@@ -32,19 +33,19 @@
         fadeOut(); // 초기에 fadeOut 함수 호출
     });
 
-    if (!isTablet) {
-        function handleMouseMove(event) {
-            const deltaX = (event.clientX - window.innerWidth / 2) * moveRatio;
-            const deltaY = (event.clientY - window.innerHeight / 2) * moveRatio;
+    // if (!isTablet) {
+    //     function handleMouseMove(event) {
+    //         const deltaX = (event.clientX - window.innerWidth / 2) * moveRatio;
+    //         const deltaY = (event.clientY - window.innerHeight / 2) * moveRatio;
 
-            characterX = -deltaX;
-            characterY = -deltaY;
-        }
+    //         characterX = -deltaX;
+    //         characterY = -deltaY;
+    //     }
 
-        onMount(() => {
-            window.addEventListener("mousemove", handleMouseMove);
-        });
-    }
+    //     onMount(() => {
+    //         window.addEventListener("mousemove", handleMouseMove);
+    //     });
+    // }
 
     function checkScreenWidth() {
         isTablet = window.innerWidth < 980;
@@ -56,27 +57,39 @@
 </script>
 
 {#if !isTablet}
-    <section id="main" class="bg-color">
+    <section
+        id="main"
+        class="bg-color"
+        use:inview={options}
+        on:inview_change={(event) => {
+            const { inView, entry, scrollDirection, observer, node } =
+                event.detail;
+            isInView = inView;
+        }}
+    >
         <div class="top-container">
             <img
+                use:reveal={{ delay: 0 }}
                 class="phone-image"
                 src="images/home-horizontal2.png"
                 alt="home-horizontal"
             />
-            <div class="intro">
+            <div use:reveal={{ delay: 50 }} class="intro">
                 <div>
                     <div class="slogan-third">
                         {mainText[0]}
                     </div>
-                    <div class="slogan-second">{mainText[1]}</div>
-                    <span class="slogan-first" class:out={isFadingOut}>
+                    <div class="slogan-second">
+                        {mainText[1]}
+                    </div>
+                    <div class="slogan-first" class:out={isFadingOut}>
                         {textArray[currentIndex]}
                         <!-- 모리 -->
-                    </span>
+                    </div>
                     <!-- <span class="slogan-doit">하세요</span> -->
                     <!-- <span class="slogan-first-doit">하세요</span> -->
                 </div>
-                <div class="badges">
+                <div use:reveal={{ delay: 100 }} class="badges">
                     <img
                         class="store-badge"
                         src="images/google-play-badge.png"

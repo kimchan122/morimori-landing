@@ -4,6 +4,7 @@
     import FiX from "svelte-icons-pack/fi/FiX";
 
     let showNavbarShadow = false;
+    console.log(showNavbarShadow);
     let isTablet = false;
     // let isMobileView = false;
     let isSidebarOpen = false;
@@ -167,14 +168,13 @@
     </div>
 </section>
 
-<style>
+<style lang="scss">
     .navbar {
         position: fixed;
         z-index: 100;
         width: 100%;
         height: 70px;
         background-color: #ffdaa3;
-
         display: flex;
         justify-content: center;
         align-items: center;
