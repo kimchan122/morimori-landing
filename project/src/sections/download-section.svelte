@@ -59,8 +59,7 @@
         class="bg-white"
         use:inview={options}
         on:inview_change={(event) => {
-            const { inView, entry, scrollDirection, observer, node } =
-                event.detail;
+            const { inView } = event.detail;
             isInView = inView;
         }}
     >
@@ -126,8 +125,7 @@
         class="bg-white-mb"
         use:inview={options}
         on:inview_change={(event) => {
-            const { inView, entry, scrollDirection, observer, node } =
-                event.detail;
+            const { inView } = event.detail;
             isInView = inView;
         }}
     >
