@@ -18,7 +18,7 @@
 
     let titleArray = ["ATELIER", "AREA", "FIESTA"];
     let scriptArray = [
-        "여러분의 소중히 작품을 모아 포트폴리오로 누구에게나 보여주세요!",
+        "여러분의 소중한 작품을 모아 모두에게 보여주세요!",
         "창작자, 소비자가 모두 모여 자유롭게 소통해봐요!",
         "대회를 개최하여 작품을 받아보고, 작가님을 후원해봐요!",
     ];
@@ -96,12 +96,19 @@
                             alt="home-horizontal"
                         />
                         {#if hoveredIndex === i}
-                            <div class="about-script">lalala</div>
+                            <div
+                                class="about-script"
+                                use:reveal={{
+                                    delay: 50,
+                                }}
+                            >
+                                {scriptArray[i]}
+                            </div>
                         {/if}
                     </div>
-                    <div class="element-script">
+                    <!-- <div class="element-script">
                         {scriptArray[i]}
-                    </div>
+                    </div> -->
                 </div>
             {/each}
         </div>
@@ -140,7 +147,7 @@
     </section>
 {/if}
 
-<style>
+<style lang="scss">
     .bg-white {
         background-color: white;
     }
@@ -167,6 +174,7 @@
         height: 230px;
         overflow: hidden;
         position: relative;
+        border-radius: 20px;
     }
 
     .about-image {
@@ -175,7 +183,8 @@
         object-fit: cover;
         overflow: hidden;
         transform-origin: center center;
-        transition: transform 0.3s ease-in-out;
+        background-color: transparent;
+        transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
     }
 
     .about-image:hover {
@@ -183,16 +192,20 @@
         height: 230px;
         transform: scale(1.2);
         overflow: hidden;
+        filter: grayscale(30%) brightness(200%) blur(30px);
     }
 
     .about-script {
         position: absolute;
+        width: 100%;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background: rgba(255, 0, 0, 0.5);
-        /* padding: 10px; */
+        font-size: 20px;
+        padding: 30px;
+        font-weight: 500;
         pointer-events: none;
+        box-sizing: border-box;
     }
 
     .element-title {
