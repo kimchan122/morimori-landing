@@ -243,7 +243,7 @@
         /* background-color: #32c7ff; */
         border: 3px solid #ffdaa3;
         border-radius: 30px;
-        margin-bottom: 6em;
+        /* margin-bottom: 6em; */
     }
 
     .app-logo {
