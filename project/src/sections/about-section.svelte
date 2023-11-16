@@ -13,7 +13,6 @@
 
     let isTablet = false;
     let isInView = false;
-    let isHovered = Array(3).fill(false);
     let hoveredIndex = -1;
 
     let titleArray = ["ATELIER", "AREA", "FIESTA"];
@@ -22,12 +21,6 @@
         "창작자, 소비자가 모두 모여 자유롭게 소통해봐요!",
         "대회를 개최하여 작품을 받아보고, 작가님을 후원해봐요!",
     ];
-    // let titleArray = ["투고하세요,", "소통하세요,", "참가하세요,"];
-    // let scriptArray = [
-    //     "내 작품을 MoriMori에 투고해서 많은 사람들에게 보여주세요!",
-    //     "MoriMori의 많은 사람들과 함께 즐거운 추억을 만들어가세요!",
-    //     "MoriMori에서 다양한 대회에 참가하세요!",
-    // ];
 
     if (!isTablet) {
         function handleMouseMove(event) {
@@ -185,14 +178,13 @@
         transform-origin: center center;
         background-color: transparent;
         transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-    }
-
-    .about-image:hover {
-        width: 300px;
-        height: 230px;
-        transform: scale(1.2);
-        overflow: hidden;
-        filter: grayscale(30%) brightness(200%) blur(30px);
+        &:hover {
+            width: 300px;
+            height: 230px;
+            transform: scale(1.2);
+            overflow: hidden;
+            filter: grayscale(30%) brightness(200%) blur(30px);
+        }
     }
 
     .about-script {
