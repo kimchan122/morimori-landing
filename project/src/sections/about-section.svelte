@@ -3,10 +3,19 @@
     import { reveal } from "svelte-reveal";
     import { inview } from "svelte-inview";
 
+    const moveRatio = 0.01;
+    const options = {
+        unobserveOnEnter: false,
+    };
+
     let characterX = 0;
     let characterY = 0;
-    const moveRatio = 0.01;
+
     let isTablet = false;
+    let isInView = false;
+    let isHovered = Array(3).fill(false);
+    let hoveredIndex = -1;
+
     let titleArray = ["ATELIER", "AREA", "FIESTA"];
     let scriptArray = [
         "여러분의 소중히 작품을 모아 포트폴리오로 누구에게나 보여주세요!",
@@ -19,11 +28,6 @@
     //     "MoriMori의 많은 사람들과 함께 즐거운 추억을 만들어가세요!",
     //     "MoriMori에서 다양한 대회에 참가하세요!",
     // ];
-
-    let isInView = false;
-    const options = {
-        unobserveOnEnter: false,
-    };
 
     if (!isTablet) {
         function handleMouseMove(event) {
@@ -46,6 +50,16 @@
     window.addEventListener("resize", checkScreenWidth);
 
     checkScreenWidth();
+
+    function handleMouseOver(i) {
+        hoveredIndex = i;
+        event.stopPropagation();
+    }
+
+    function handleMouseOut() {
+        hoveredIndex = -1;
+        event.stopPropagation();
+    }
 </script>
 
 {#if !isTablet}
@@ -67,12 +81,23 @@
                     <div class="element-title">
                         <h2>{title}</h2>
                     </div>
-                    <div class="about-image-conatiner">
+                    <div
+                        class="about-image-conatiner"
+                        on:mouseover={() => handleMouseOver(i)}
+                        on:mouseout={handleMouseOut}
+                        on:focus={() => handleMouseOver(i)}
+                        on:blur={handleMouseOut}
+                        role="button"
+                        tabindex={i}
+                    >
                         <img
                             class="about-image"
                             src="images/about-image.png"
                             alt="home-horizontal"
                         />
+                        {#if hoveredIndex === i}
+                            <div class="about-script">lalala</div>
+                        {/if}
                     </div>
                     <div class="element-script">
                         {scriptArray[i]}
@@ -141,6 +166,7 @@
         width: 300px;
         height: 230px;
         overflow: hidden;
+        position: relative;
     }
 
     .about-image {
@@ -157,6 +183,16 @@
         height: 230px;
         transform: scale(1.2);
         overflow: hidden;
+    }
+
+    .about-script {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(255, 0, 0, 0.5);
+        /* padding: 10px; */
+        pointer-events: none;
     }
 
     .element-title {
