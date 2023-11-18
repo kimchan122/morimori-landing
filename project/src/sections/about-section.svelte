@@ -15,7 +15,7 @@
     let isInView = false;
     let hoveredIndex = -1;
 
-    let titleArray = ["ATELIER", "AREA", "FIESTA"];
+    let titleArray = ["ATELIER", "AREA", "ARENA"];
     let scriptArray = [
         "여러분의 소중한 작품을 모아 모두에게 보여주세요!",
         "창작자, 소비자가 모두 모여 자유롭게 소통해봐요!",
