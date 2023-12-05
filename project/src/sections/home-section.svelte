@@ -2,6 +2,8 @@
     import { onMount } from "svelte";
     import { reveal } from "svelte-reveal";
     import { inview } from "svelte-inview";
+    import Icon from "svelte-icons-pack/Icon.svelte";
+    import BsDiscord from "svelte-icons-pack/bs/BsDiscord";
 
     let isTablet = false;
     let isInView = false;
@@ -33,22 +35,13 @@
         fadeOut(); // 초기에 fadeOut 함수 호출
     });
 
-    // if (!isTablet) {
-    //     function handleMouseMove(event) {
-    //         const deltaX = (event.clientX - window.innerWidth / 2) * moveRatio;
-    //         const deltaY = (event.clientY - window.innerHeight / 2) * moveRatio;
-
-    //         characterX = -deltaX;
-    //         characterY = -deltaY;
-    //     }
-
-    //     onMount(() => {
-    //         window.addEventListener("mousemove", handleMouseMove);
-    //     });
-    // }
-
     function checkScreenWidth() {
         isTablet = window.innerWidth < 980;
+    }
+
+    function handleDiscordBadgeClick() {
+        const inviteLink = "https://discord.gg/YbhkU4mdPW";
+        window.open(inviteLink, "_blank");
     }
 
     window.addEventListener("resize", checkScreenWidth);
@@ -104,6 +97,23 @@
                         alt="download-app-store"
                     />
                 </div>
+                <div
+                    use:reveal={{ transition: "fade", delay: 200 }}
+                    class="badges"
+                >
+                    <button
+                        class="discord-badge"
+                        on:click={handleDiscordBadgeClick}
+                    >
+                        <div>
+                            <Icon src={BsDiscord} size="36" color="#5865F2" />
+                        </div>
+                        <div class="badge-text-container">
+                            <p class="badge-title">Discord에서</p>
+                            <p class="badge-script">소통하기</p>
+                        </div>
+                    </button>
+                </div>
                 <!-- <div>
                     <button class="goto-web-service">서비스로 이동</button>
                 </div> -->
@@ -151,6 +161,23 @@
                         alt="download-app-store"
                     />
                 </div>
+                <div
+                    use:reveal={{ transition: "fade", delay: 200 }}
+                    class="badges-mb"
+                >
+                    <button
+                        class="discord-badge-mb"
+                        on:click={handleDiscordBadgeClick}
+                    >
+                        <div>
+                            <Icon src={BsDiscord} size="24" color="#5865F2" />
+                        </div>
+                        <div class="badge-text-container-mb">
+                            <p class="badge-title-mb">Discord에서</p>
+                            <p class="badge-script-mb">소통하기</p>
+                        </div>
+                    </button>
+                </div>
                 <!-- <div>
                     <button class="goto-web-service-mb">서비스로 이동</button>
                 </div> -->
@@ -173,7 +200,7 @@
     <!-- <section class="bg-white" /> -->
 {/if}
 
-<style>
+<style lang="scss">
     .bg-white {
         background-color: white;
         height: 150px;
@@ -269,6 +296,40 @@
         justify-content: center;
         align-items: center;
         gap: 20px;
+    }
+
+    .discord-badge {
+        width: 100%;
+        height: 61px;
+        background-color: black;
+        border: 2px solid gray;
+        border-radius: 10px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        .badge-text-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            margin-left: 15px;
+            .badge-title {
+                color: white;
+                margin: 0;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 26px;
+            }
+            .badge-script {
+                color: white;
+                margin: 0;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
     }
 
     .store-badge {
@@ -442,6 +503,7 @@
             font-size: 144px;
             font-weight: 700;
         }
+
         /* .slogan-first-doit-mb {
             transition: opacity 0.4s;
             font-family: "NotoSansKR";
@@ -468,8 +530,43 @@
         justify-content: center;
         align-items: center;
         gap: 20px;
-        flex-wrap: wrap;
-        align-content: center;
+        /* width: 100%; */
+        /* flex-wrap: wrap; */
+        /* align-content: center; */
+    }
+
+    .discord-badge-mb {
+        width: 320px;
+        height: 46px;
+        background-color: black;
+        border: 1px solid gray;
+        border-radius: 5px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        .badge-text-container-mb {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            margin-left: 15px;
+            .badge-title-mb {
+                color: white;
+                margin: 0;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 18px;
+            }
+            .badge-script-mb {
+                color: white;
+                margin: 0;
+                font-weight: 300;
+                font-size: 10px;
+                line-height: 12px;
+            }
+        }
     }
 
     .store-badge-mb {
