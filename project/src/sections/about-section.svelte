@@ -22,9 +22,9 @@
         "대회를 개최하여 작품을 받아보고, 작가님을 후원해봐요!",
     ];
     let imageArray = [
+        "/images/Screenshot_Atelier.png",
         "/images/Screenshot_Area.png",
         "/images/ScreenShot_Arena.png",
-        "/images/Screenshot_Atelier.png",
     ];
 
     if (!isTablet) {
@@ -75,8 +75,18 @@
                 use:reveal={{ transition: "fade", delay: i * 100 }}
                 class="about-element"
             >
-                <div class="element-title">
-                    <h2>{title}</h2>
+                <div class="element-text-container">
+                    <div class="element-title">
+                        <h2>{title}</h2>
+                    </div>
+                    <div
+                        class="about-script"
+                        use:reveal={{
+                            delay: 50,
+                        }}
+                    >
+                        {scriptArray[i]}
+                    </div>
                 </div>
                 <div
                     class="about-image-conatiner"
@@ -92,24 +102,7 @@
                         src={imageArray[i]}
                         alt="home-horizontal"
                     />
-                    {#if isTablet === false}
-                        {#if hoveredIndex === i}
-                            <div
-                                class="about-script"
-                                use:reveal={{
-                                    delay: 50,
-                                }}
-                            >
-                                {scriptArray[i]}
-                            </div>
-                        {/if}
-                    {/if}
                 </div>
-                {#if isTablet === true}
-                    <div class="element-script">
-                        {scriptArray[i]}
-                    </div>
-                {/if}
             </div>
         {/each}
     </div>
