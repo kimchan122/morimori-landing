@@ -29,7 +29,7 @@
     }
 
     function checkScreenWidth() {
-        isTablet = window.innerWidth < 980;
+        isTablet = window.innerWidth <= 980;
         if (window.innerWidth >= 800) {
             particlesNumber = 2;
         } else {
@@ -63,7 +63,6 @@
     ];
 </script>
 
-<!-- {#if !isTablet} -->
 <section
     id="news"
     class="bg-white"
@@ -78,85 +77,68 @@
             <h1 use:reveal={{ transition: "fade", delay: 0 }}>NEWS</h1>
 
             <div use:reveal={{ transition: "fade", delay: 100 }}>
-                <Carousel
-                    particlesToShow={3}
-                    particlesToScroll={1}
-                    autoplay
-                    autoplayDuration={4000}
-                    dots={false}
-                >
-                    {#each newsItems as item (item.image)}
-                        <div class="carousel-box">
-                            <div class="carousel-element">
-                                <img
-                                    class="news-image"
-                                    src={item.image}
-                                    alt=""
-                                />
-                                <div class="news-text">
-                                    <h3 class="news-title">
-                                        {item.title}
-                                    </h3>
-                                    <p class="news-script">
-                                        {item.description}
-                                    </p>
+                {#if isTablet === true}
+                    <Carousel
+                        particlesToShow={particlesNumber}
+                        particlesToScroll={1}
+                        autoplay
+                        autoplayDuration={4000}
+                        dots={false}
+                        arrows={false}
+                    >
+                        {#each newsItems as item (item.image)}
+                            <div class="carousel-box-mb">
+                                <div class="carousel-element-mb">
+                                    <img
+                                        class="news-image-mb"
+                                        src={item.image}
+                                        alt=""
+                                    />
+                                    <div class="news-text-mb">
+                                        <h3 class="news-title-mb">
+                                            {item.title}
+                                        </h3>
+                                        <p class="news-script-mb">
+                                            {item.description}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    {/each}
-                </Carousel>
+                        {/each}
+                    </Carousel>
+                {:else}
+                    <Carousel
+                        particlesToShow={3}
+                        particlesToScroll={1}
+                        autoplay
+                        autoplayDuration={4000}
+                        dots={false}
+                    >
+                        {#each newsItems as item (item.image)}
+                            <div class="carousel-box">
+                                <div class="carousel-element">
+                                    <img
+                                        class="news-image"
+                                        src={item.image}
+                                        alt=""
+                                    />
+                                    <div class="news-text">
+                                        <h3 class="news-title">
+                                            {item.title}
+                                        </h3>
+                                        <p class="news-script">
+                                            {item.description}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        {/each}
+                    </Carousel>
+                {/if}
             </div>
         </div>
     </div>
 </section>
-
-<!-- {/if} -->
-<!-- {#if isTablet}
-    <section
-        id="news"
-        class="bg-white"
-        use:inview={options}
-        on:inview_change={(event) => {
-            const { inView } = event.detail;
-            isInView = inView;
-        }}
-    >
-        <div class="container-mb">
-            <div class="role-mb">
-                <h1>NEWS</h1>
-
-                <Carousel
-                    particlesToShow={particlesNumber}
-                    particlesToScroll={1}
-                    autoplay
-                    autoplayDuration={4000}
-                    dots={false}
-                    arrows={false}
-                >
-                    {#each newsItems as item (item.image)}
-                        <div class="carousel-box-mb">
-                            <div class="carousel-element-mb">
-                                <img
-                                    class="news-image-mb"
-                                    src={item.image}
-                                    alt=""
-                                />
-                                <div class="news-text-mb">
-                                    <h3 class="news-title-mb">
-                                        {item.title}
-                                    </h3>
-                                    <p class="news-script-mb">
-                                        {item.description}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    {/each}
-                </Carousel>
-            </div>
-        </div>
-    </section>
-{/if} -->
 
 <style>
     @import "../styles/newsSectionStyles.scss";

@@ -21,7 +21,7 @@
     });
 
     function checkTabletView() {
-        isTablet = window.innerWidth < 980;
+        isTablet = window.innerWidth <= 980;
         // isMobileView = window.innerWidth < 768;
         if (!isTablet) isSidebarOpen = false;
     }

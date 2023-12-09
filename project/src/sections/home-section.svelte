@@ -36,7 +36,7 @@
     });
 
     function checkScreenWidth() {
-        isTablet = window.innerWidth < 980;
+        isTablet = window.innerWidth <= 980;
     }
 
     function handleDiscordBadgeClick() {
