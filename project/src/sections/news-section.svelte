@@ -140,6 +140,6 @@
     </div>
 </section>
 
-<style>
+<style lang="scss">
     @import "../styles/newsSectionStyles.scss";
 </style>

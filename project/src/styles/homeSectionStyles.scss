@@ -1,0 +1,252 @@
+.bg-white {
+    background-color: white;
+    height: 150px;
+}
+
+.bg-color {
+    background-color: #ffdaa3;
+    height: 600px;
+
+    .top-container {
+        padding-top: 70px;
+        width: 100%;
+        height: calc(100vh - 300px);
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 6em 0 0 0;
+        display: flex;
+        justify-content: space-between;
+
+        .phone-image {
+            width: 400px;
+            height: 670px;
+            object-fit: contain;
+            box-sizing: border-box;
+        }
+
+        .intro {
+            padding-top: 70px;
+            margin-right: 4rem;
+            max-width: 420px;
+
+            div {
+                .slogan-third {
+                    font-family: "NotoSansKR";
+                    color: black;
+                    font-size: 28px;
+                    font-weight: 300;
+                }
+
+                .slogan-second {
+                    font-family: "NotoSansKR";
+                    color: black;
+                    font-size: 36px;
+                    font-weight: 500;
+                }
+
+                .slogan-first {
+                    transition: opacity 0.4s;
+                    font-family: "NotoSansKR";
+                    color: white;
+                    font-size: 144px;
+                    font-weight: 700;
+
+                    &.out {
+                        opacity: 0;
+                    }
+                }
+            }
+
+            .badges {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+
+                .store-badge {
+                    width: 200px;
+                }
+
+                .discord-badge {
+                    width: 100%;
+                    height: 61px;
+                    background-color: black;
+                    border: 2px solid gray;
+                    border-radius: 10px;
+                    box-sizing: border-box;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: row;
+
+                    .badge-text-container {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: center;
+                        margin-left: 15px;
+
+                        .badge-title {
+                            color: white;
+                            margin: 0;
+                            font-weight: 500;
+                            font-size: 20px;
+                            line-height: 26px;
+                        }
+
+                        .badge-script {
+                            color: white;
+                            margin: 0;
+                            font-weight: 400;
+                            font-size: 12px;
+                            line-height: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* for mobile / tablet */
+
+.bg-color-mb {
+    background-color: #ffdaa3;
+
+    .top-container-mb {
+        width: 100%;
+        min-height: 100vh;
+        margin: 0 auto;
+        padding: 70px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        justify-content: space-between;
+        box-sizing: border-box;
+
+        .intro-mb {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding-top: 70px;
+            height: 100%;
+            box-sizing: content-box;
+
+            div {
+                @media (max-width: 420px) {
+                    .slogan-third-mb {
+                        font-family: "NotoSansKR";
+                        color: black;
+                        font-size: 20px;
+                        font-weight: 300;
+                    }
+
+                    .slogan-second-mb {
+                        font-family: "NotoSansKR";
+                        color: black;
+                        font-size: 26px;
+                        font-weight: 500;
+                    }
+
+                    .slogan-first-mb {
+                        transition: opacity 0.4s;
+                        font-family: "NotoSansKR";
+                        color: white;
+                        font-size: 120px;
+                        font-weight: 700;
+
+                        &.out {
+                            opacity: 0;
+                        }
+                    }
+                }
+
+                @media (min-width: 421px) and (max-width: 980px) {
+                    .slogan-third-mb {
+                        font-family: "NotoSansKR";
+                        color: black;
+                        font-size: 26px;
+                        font-weight: 300;
+                    }
+
+                    .slogan-second-mb {
+                        font-family: "NotoSansKR";
+                        color: black;
+                        font-size: 32px;
+                        font-weight: 500;
+                    }
+
+                    .slogan-first-mb {
+                        transition: opacity 0.4s;
+                        font-family: "NotoSansKR";
+                        color: white;
+                        font-size: 144px;
+                        font-weight: 700;
+
+                        &.out {
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+
+            .badges-mb {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+
+                .store-badge-mb {
+                    width: 150px;
+                }
+
+                .discord-badge-mb {
+                    width: 320px;
+                    height: 46px;
+                    background-color: black;
+                    border: 1px solid gray;
+                    border-radius: 5px;
+                    box-sizing: border-box;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: row;
+
+                    .badge-text-container-mb {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: center;
+                        margin-left: 15px;
+
+                        .badge-title-mb {
+                            color: white;
+                            margin: 0;
+                            font-weight: 500;
+                            font-size: 16px;
+                            line-height: 18px;
+                        }
+
+                        .badge-script-mb {
+                            color: white;
+                            margin: 0;
+                            font-weight: 300;
+                            font-size: 10px;
+                            line-height: 12px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .phone-image-mb {
+            width: 100%;
+            max-width: 300px;
+            padding: 0px 30px 0px 30px;
+            box-sizing: border-box;
+        }
+    }
+}
