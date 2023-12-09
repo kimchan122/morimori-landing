@@ -1,0 +1,18 @@
+.policy-section {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div {
+        max-width: 800px;
+        padding: 20px;
+        box-sizing: border-box;
+        line-height: 200%;
+
+        .policy-main-text {
+            text-align: left;
+        }
+    }
+
+}

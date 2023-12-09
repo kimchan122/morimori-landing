@@ -1,5 +1,6 @@
 <script>
     import { onMount } from "svelte";
+    import { Link } from "svelte-routing";
     // import { reveal } from "svelte-reveal";
     // import Icon from "svelte-icons-pack/Icon.svelte";
     // import BsDiscord from "svelte-icons-pack/bs/BsDiscord";
@@ -62,6 +63,9 @@
                         href="https://www.youtube.com/@MoriChanneru"
                         target="_blank"
                     >
+                    <a href="https://discord.gg/YbhkU4mdPW" target="_blank">
+                        Discord
+                    </a>
                         Youtube
                     </a>
                     <a href="https://discord.gg/YbhkU4mdPW" target="_blank">
@@ -126,18 +130,28 @@
 {#if !isTablet}
     <footer id="footer" class="bg-darkgray">
         <div class="footer">
-            <div>© 2023 MORI, Inc.</div>
-            <div>개인 정보 보호 정책</div>
-            <div>이용 약관</div>
+            <a>© 2023 MORI, Inc.</a>
+            <a
+                href="https://sites.google.com/view/morimoriprivacy"
+                target="_blank"
+            >
+                개인정보 보호정책
+            </a>
+            <a href="/policy" target="_blank">이용 약관</a>
         </div>
     </footer>
 {/if}
 {#if isTablet}
     <footer id="footer" class="bg-darkgray">
         <div class="footer-mb">
-            <div>개인 정보 보호 정책</div>
-            <div>이용 약관</div>
-            <div>© 2023 MORI, Inc.</div>
+            <a
+                href="https://sites.google.com/view/morimoriprivacy"
+                target="_blank"
+            >
+                개인정보 보호정책
+            </a>
+            <a href="/policy" target="_blank">이용 약관</a>
+            <a>© 2023 MORI, Inc.</a>
         </div>
     </footer>
 {/if}
@@ -225,8 +239,12 @@
         align-items: center;
         color: white;
 
-        div {
+        * {
             margin-right: 50px;
+            color: white;
+        }
+        Link {
+            color: white;
         }
     }
     .footer-mb {

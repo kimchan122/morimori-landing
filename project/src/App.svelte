@@ -1,5 +1,10 @@
 <script>
-  import PageSample1 from "./pages/page.svelte";
+  import { Route, Router } from "svelte-routing";
+  import Main from "./pages/Main.svelte";
+  import Policy from "./pages/Policy.svelte";
 </script>
 
-<PageSample1 />
+<Router>
+  <Route path="/" component={Main} />
+  <Route path="/policy" component={Policy} />
+</Router>
