@@ -3,7 +3,7 @@ window.onload = () => {
   window.scrollTo(0, 0);
 };
 
-import './app.css'
+import './app.scss'
 import App from './App.svelte'
 
 const app = new App({

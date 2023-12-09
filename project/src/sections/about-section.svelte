@@ -21,6 +21,11 @@
         "창작자, 소비자가 모두 모여 자유롭게 소통해봐요!",
         "대회를 개최하여 작품을 받아보고, 작가님을 후원해봐요!",
     ];
+    let imageArray = [
+        "/images/Screenshot_Atelier.png",
+        "/images/Screenshot_Area.png",
+        "/images/ScreenShot_Arena.png",
+    ];
 
     if (!isTablet) {
         function handleMouseMove(event) {
@@ -177,7 +182,9 @@
         overflow: hidden;
         transform-origin: center center;
         background-color: transparent;
-        transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+        transition:
+            transform 0.3s ease-in-out,
+            filter 0.3s ease-in-out;
         &:hover {
             width: 300px;
             height: 230px;
