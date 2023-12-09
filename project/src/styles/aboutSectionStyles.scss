@@ -1,0 +1,100 @@
+.bg-white {
+    background-color: white;
+
+    .container {
+        width: 100%;
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 70px 20px 70px 20px;
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+
+        .about-element {
+            width: 300px;
+            color: black;
+
+            .element-title {
+                background: linear-gradient(transparent 80%, #ffdaa3 0%);
+            }
+
+            .about-image-conatiner {
+                width: 300px;
+                // height: 600px;
+                // overflow:;
+                position: relative;
+                border-radius: 20px;
+                background-color: #f8f8f8;
+
+                .about-image {
+                    width: 80%;
+                    // height: 600px;
+                    margin: 10px 0px;
+                    object-fit: cover;
+                    object-position: top;
+                    overflow: hidden;
+                    transform-origin: center center;
+                    background-color: transparent;
+                    transition:
+                        // transform 0.3s ease-in-out,
+                        filter 0.3s ease-in-out,
+                        width 0.3s ease;
+
+                    &:hover {
+                        width: 80%;
+                        // height: 230px;
+                        // transform: scale(1.2);
+                        overflow: hidden;
+                        // object-fit: cover;
+                        filter: grayscale(30%) brightness(200%) blur(30px);
+                    }
+                }
+
+                .about-script {
+                    position: absolute;
+                    width: 100%;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: 20px;
+                    padding: 30px;
+                    font-weight: 500;
+                    pointer-events: none;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 980px) {
+        .container {
+            align-items: center;
+            flex-direction: column;
+            gap: 30px;
+
+            .about-element {
+                .about-image-conatiner {
+                    .about-image {
+                        &:hover {
+                            width: 80%;
+                            transform: none;
+                            filter: none;
+                        }
+                    }
+                }
+
+                .element-script {
+                    width: 100%;
+                    font-size: 20px;
+                    padding: 10px 30px 0px 30px;
+                    font-weight: 500;
+                    pointer-events: none;
+                    display: flex;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+
+
+}

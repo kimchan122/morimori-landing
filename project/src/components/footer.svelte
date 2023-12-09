@@ -60,8 +60,13 @@
                     <!-- <a>Discord</a> -->
                     <a
                         href="https://www.youtube.com/@MoriChanneru"
-                        target="_blank">Youtube</a
+                        target="_blank"
                     >
+                        Youtube
+                    </a>
+                    <a href="https://discord.gg/YbhkU4mdPW" target="_blank">
+                        Discord
+                    </a>
                     <!-- <a>Linkedin</a> -->
                     <!-- <a>Instagram</a> -->
                 </div>
@@ -101,6 +106,9 @@
                         href="https://www.youtube.com/@MoriChanneru"
                         target="_blank">Youtube</a
                     >
+                    <a href="https://discord.gg/YbhkU4mdPW" target="_blank">
+                        Discord
+                    </a>
                     <!-- <a>Linkedin</a> -->
                     <!-- <a>Instagram</a> -->
                 </div>
