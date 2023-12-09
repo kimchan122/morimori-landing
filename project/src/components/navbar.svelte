@@ -4,9 +4,7 @@
     import FiX from "svelte-icons-pack/fi/FiX";
 
     let showNavbarShadow = false;
-    console.log(showNavbarShadow);
     let isTablet = false;
-    // let isMobileView = false;
     let isSidebarOpen = false;
 
     function scrollToSection(sectionId) {
@@ -22,7 +20,6 @@
 
     function checkTabletView() {
         isTablet = window.innerWidth <= 980;
-        // isMobileView = window.innerWidth < 768;
         if (!isTablet) isSidebarOpen = false;
     }
 
@@ -126,9 +123,10 @@
 <section
     class="sidebar-background"
     class:open={isSidebarOpen}
-    on:click={closeSidebar}
+    on:click={(event) => closeSidebar(event)}
     role="button"
     tabindex="0"
+    id="app"
 >
     <div class="sidebar" class:open={isSidebarOpen}>
         <div class="sidebar-container">
