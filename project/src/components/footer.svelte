@@ -61,8 +61,13 @@
                     <!-- <a>Discord</a> -->
                     <a
                         href="https://www.youtube.com/@MoriChanneru"
-                        target="_blank">Youtube</a
+                        target="_blank"
                     >
+                    <a href="https://discord.gg/YbhkU4mdPW" target="_blank">
+                        Discord
+                    </a>
+                        Youtube
+                    </a>
                     <a href="https://discord.gg/YbhkU4mdPW" target="_blank">
                         Discord
                     </a>

@@ -1,0 +1,190 @@
+.bg-white {
+    background-color: white;
+
+    .container {
+        width: 100%;
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 70px 20px 70px 20px;
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .about-element {
+            color: black;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            &:nth-child(odd) {
+                .element-text-container {
+                    order: 1;
+                }
+
+                .about-image-conatiner {
+                    order: 2;
+                }
+            }
+
+            &:nth-child(even) {
+                .element-text-container {
+                    order: 2;
+                }
+
+                .about-image-conatiner {
+                    order: 1;
+                }
+            }
+
+            .element-text-container {
+                box-sizing: border-box;
+                width: 500px;
+
+                .element-title {
+
+                    background: linear-gradient(transparent 85%, #ffdaa3 0%);
+
+                    h2 {
+                        font-size: 48px;
+                    }
+                }
+
+                .about-script {
+                    font-size: 20px;
+                    font-weight: 500;
+                    pointer-events: none;
+                    box-sizing: border-box;
+                }
+            }
+
+
+            .about-image-conatiner {
+                width: 350px;
+                position: relative;
+                border-radius: 20px;
+                background-color: transparent;
+
+                .about-image {
+                    width: 80%;
+                    margin: 10px 0px;
+                    object-fit: cover;
+                    object-position: top;
+                    overflow: hidden;
+                    transform-origin: center center;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 980px) {
+        .container {
+            align-items: center;
+            flex-direction: column;
+            // gap: 30px;
+
+            .about-element {
+
+
+                .element-text-container {
+                    box-sizing: border-box;
+                    width: 450px;
+
+                    .element-title {
+                        background: linear-gradient(transparent 85%, #ffdaa3 0%);
+
+                        h2 {
+                            font-size: 36px;
+                        }
+                    }
+
+                    .about-script {
+                        font-size: 18px;
+                        font-weight: 500;
+                        pointer-events: none;
+                        box-sizing: border-box;
+                    }
+
+                }
+
+                .about-image-conatiner {
+                    width: 300px;
+
+                    .about-image {
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        .container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+
+            .about-element {
+                flex-direction: column;
+
+                &:nth-child(odd) {
+                    .element-text-container {
+                        order: 1;
+                    }
+
+                    .about-image-conatiner {
+                        order: 2;
+                    }
+                }
+
+                &:nth-child(even) {
+                    .element-text-container {
+                        order: 1;
+                    }
+
+                    .about-image-conatiner {
+                        order: 2;
+                    }
+                }
+
+                .element-text-container {
+                    box-sizing: border-box;
+                    width: 100%;
+
+                    .element-title {
+                        width: 100%;
+                        box-sizing: border-box;
+                        background: linear-gradient(transparent 85%, #ffdaa3 0%);
+
+                        h2 {
+                            font-size: 36px;
+                        }
+                    }
+
+                    .about-script {
+                        font-size: 18px;
+                        font-weight: 500;
+                        pointer-events: none;
+                        display: flex;
+                        box-sizing: border-box;
+                    }
+
+                }
+
+                .about-image-conatiner {
+                    width: 300px;
+
+                    .about-image {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
