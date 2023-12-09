@@ -60,6 +60,18 @@
                         &:hover {
                             transform: scale(1.2);
                         }
+
+                        @media (min-width: 768px) and (max-width: 980px) {
+                            &:hover {
+                                transform: none;
+                            }
+                        }
+
+                        @media (max-width: 767px) {
+                            &:hover {
+                                transform: none;
+                            }
+                        }
                     }
 
                     h2 {
