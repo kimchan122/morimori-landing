@@ -212,5 +212,5 @@
 </section>
 
 <style lang="scss">
-    @import "../../styles/policyStyles.scss";
+    @import "../../styles/policy/policyStyles.scss";
 </style>
