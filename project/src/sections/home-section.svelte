@@ -5,6 +5,11 @@
     import Icon from "svelte-icons-pack/Icon.svelte";
     import BsDiscord from "svelte-icons-pack/bs/BsDiscord";
 
+    let isMobile = /Android/i.test(navigator.userAgent);
+    let storeLink = isMobile
+        ? "https://play.google.com/store/apps/details?id=com.projectMori.app"
+        : "https://play.google.com/store/apps/details?id=com.projectMori.app";
+
     let isTablet = false;
     let isInView = false;
     const options = {
@@ -63,7 +68,7 @@
             <img
                 use:reveal={{ transition: "fade", delay: 0 }}
                 class="phone-image"
-                src="images/home-horizontal2.png"
+                src="images/Home_AppLogo_Phone.png"
                 alt="home-horizontal"
             />
 
@@ -83,11 +88,13 @@
                     use:reveal={{ transition: "fade", delay: 200 }}
                     class="badges"
                 >
-                    <img
-                        class="store-badge"
-                        src="images/google-play-badge.png"
-                        alt="download-google-play"
-                    />
+                    <a href={storeLink} target="_blank">
+                        <img
+                            class="store-badge"
+                            src="images/google-play-badge.png"
+                            alt="download-google-play"
+                        />
+                    </a>
                     <img
                         class="store-badge"
                         src="images/Download_on_the_App_Store_Badge_KR_RGB_blk_100317.svg"
@@ -141,11 +148,13 @@
                     class="badges-mb"
                     use:reveal={{ transition: "fade", delay: 100 }}
                 >
-                    <img
-                        class="store-badge-mb"
-                        src="images/google-play-badge.png"
-                        alt="download-google-play"
-                    />
+                    <a href={storeLink} target="_blank">
+                        <img
+                            class="store-badge-mb"
+                            src="images/google-play-badge.png"
+                            alt="download-google-play"
+                        />
+                    </a>
                     <img
                         class="store-badge-mb"
                         src="images/Download_on_the_App_Store_Badge_KR_RGB_blk_100317.svg"
@@ -173,7 +182,7 @@
             <img
                 use:reveal={{ transition: "fade", delay: 200 }}
                 class="phone-image-mb"
-                src="images/home-mb.png"
+                src="images/Mobile_Home_AppLogo_Phone.png"
                 alt="home-horizontal"
             />
         </div>

@@ -3,6 +3,11 @@
     import { reveal } from "svelte-reveal";
     import { inview } from "svelte-inview";
 
+    let isMobile = /Android/i.test(navigator.userAgent);
+    let storeLink = isMobile
+        ? "https://play.google.com/store/apps/details?id=com.projectMori.app"
+        : "https://play.google.com/store/apps/details?id=com.projectMori.app";
+
     let characterX = 0;
     let characterY = 0;
     const moveRatio = 0.01;
@@ -97,11 +102,13 @@
                     class="badges"
                     use:reveal={{ transition: "fade", delay: 700 }}
                 >
-                    <img
-                        class="store-badge"
-                        src="images/google-play-badge.png"
-                        alt="download-google-play"
-                    />
+                    <a href={storeLink} target="_blank">
+                        <img
+                            class="store-badge"
+                            src="images/google-play-badge.png"
+                            alt="download-google-play"
+                        />
+                    </a>
                     <img
                         class="store-badge"
                         src="images/Download_on_the_App_Store_Badge_KR_RGB_blk_100317.svg"
