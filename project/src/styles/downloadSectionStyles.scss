@@ -107,6 +107,15 @@
                     gap: 20px;
                     flex-wrap: wrap;
 
+                    a {
+                        display: flex;
+
+                        .store-badge {
+                            width: 200px;
+                            padding: 5px 0px
+                        }
+                    }
+
                     .store-badge {
                         width: 200px;
                         padding: 5px 0px

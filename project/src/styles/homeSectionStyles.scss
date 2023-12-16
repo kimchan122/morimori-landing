@@ -63,6 +63,12 @@
                 align-items: center;
                 gap: 20px;
 
+                a {
+                    .store-badge {
+                        width: 200px;
+                    }
+                }
+
                 .store-badge {
                     width: 200px;
                 }
