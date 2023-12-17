@@ -29,10 +29,10 @@
         "다양한 기기로 MoriMori를 즐겨보세요!",
     ];
     let imageArray = [
-        "/images/download01.png",
-        "/images/download02.png",
-        "/images/download03.png",
-        "/images/download04.png",
+        "images/download01.png",
+        "images/download02.png",
+        "images/download03.png",
+        "images/download04.png",
     ];
 
     if (!isTablet) {
