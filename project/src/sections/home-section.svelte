@@ -68,7 +68,7 @@
             <img
                 use:reveal={{ transition: "fade", delay: 0 }}
                 class="phone-image"
-                src="images/Home_AppLogo_Phone.png"
+                src="images/home_appLogo_phone.png"
                 alt="home-horizontal"
             />
 
@@ -182,7 +182,7 @@
             <img
                 use:reveal={{ transition: "fade", delay: 200 }}
                 class="phone-image-mb"
-                src="images/Mobile_Home_AppLogo_Phone.png"
+                src="images/mobile_home_appLogo_phone.png"
                 alt="home-horizontal"
             />
         </div>
