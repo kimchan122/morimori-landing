@@ -29,10 +29,10 @@
         "다양한 기기로 MoriMori를 즐겨보세요!",
     ];
     let downloadImageArray = [
-        "images/download01.png",
-        "images/download02.png",
-        "images/download03.png",
-        "images/download04.png",
+        "./images/download01.png",
+        "./images/download02.png",
+        "./images/download03.png",
+        "./images/download04.png",
     ];
 
     if (!isTablet) {
@@ -90,7 +90,7 @@
         >
             <img
                 class="app-logo"
-                src="images/app-logo.png"
+                src="./images/app-logo.png"
                 alt="app-logo"
                 use:reveal={{ transition: "fade", delay: 500 }}
             />
@@ -105,13 +105,13 @@
                     <a href={storeLink} target="_blank">
                         <img
                             class="store-badge"
-                            src="images/google-play-badge.png"
+                            src="./images/google-play-badge.png"
                             alt="download-google-play"
                         />
                     </a>
                     <img
                         class="store-badge"
-                        src="images/Download_on_the_App_Store_Badge_KR_RGB_blk_100317.svg"
+                        src="./images/Download_on_the_App_Store_Badge_KR_RGB_blk_100317.svg"
                         alt="download-app-store"
                     />
                 </div>

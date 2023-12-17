@@ -68,7 +68,7 @@
             <img
                 use:reveal={{ transition: "fade", delay: 0 }}
                 class="phone-image"
-                src="images/home_appLogo_phone.png"
+                src="./images/home-appLogo-phone.png"
                 alt="home-horizontal"
             />
 
@@ -91,13 +91,13 @@
                     <a href={storeLink} target="_blank">
                         <img
                             class="store-badge"
-                            src="images/google-play-badge.png"
+                            src="./images/google-play-badge.png"
                             alt="download-google-play"
                         />
                     </a>
                     <img
                         class="store-badge"
-                        src="images/Download_on_the_App_Store_Badge_KR_RGB_blk_100317.svg"
+                        src="./images/Download_on_the_App_Store_Badge_KR_RGB_blk_100317.svg"
                         alt="download-app-store"
                     />
                 </div>
@@ -151,13 +151,13 @@
                     <a href={storeLink} target="_blank">
                         <img
                             class="store-badge-mb"
-                            src="images/google-play-badge.png"
+                            src="./images/google-play-badge.png"
                             alt="download-google-play"
                         />
                     </a>
                     <img
                         class="store-badge-mb"
-                        src="images/Download_on_the_App_Store_Badge_KR_RGB_blk_100317.svg"
+                        src="./images/Download_on_the_App_Store_Badge_KR_RGB_blk_100317.svg"
                         alt="download-app-store"
                     />
                 </div>
@@ -182,7 +182,7 @@
             <img
                 use:reveal={{ transition: "fade", delay: 200 }}
                 class="phone-image-mb"
-                src="images/mobile_home_appLogo_phone.png"
+                src="./images/mobile-home-appLogo-phone.png"
                 alt="home-horizontal"
             />
         </div>

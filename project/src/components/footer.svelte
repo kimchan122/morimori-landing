@@ -39,7 +39,7 @@
                 <div class="logo">
                     <img
                         class="nav-logo"
-                        src="images/MORI_HORIZONTAL_BLACK.png"
+                        src="./images/MORI_HORIZONTAL_BLACK.png"
                         alt="logo_black"
                     />
                 </div>

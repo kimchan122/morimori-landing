@@ -22,9 +22,9 @@
         "대회를 개최하여 작품을 받아보고, 작가님을 후원해봐요!",
     ];
     let aboutImageArray = [
-        "images/screenshot_atelier.png",
-        "images/screenshot_area.png",
-        "images/screenShot_arena.png",
+        "./images/screenshot-atelier.png",
+        "./images/screenshot-area.png",
+        "./images/screenshot-arena.png",
     ];
 
     if (!isTablet) {

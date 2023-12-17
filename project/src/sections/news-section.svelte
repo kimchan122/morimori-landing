@@ -43,19 +43,19 @@
 
     const newsItems = [
         {
-            image: "images/sample1.jpg",
+            image: "./images/sample1.jpg",
             title: "NEWS TITLE NEWS TITLE NEWS TITLE NEWS TITLE",
             description:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur",
         },
         {
-            image: "images/sample2.png",
+            image: "./images/sample2.png",
             title: "NEWS TITLE NEWS TITLE NEWS TITLE NEWS TITLE",
             description:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur",
         },
         {
-            image: "images/sample3.jpg",
+            image: "./images/sample3.jpg",
             title: "NEWS TITLE NEWS TITLE NEWS TITLE NEWS TITLE",
             description:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur",
