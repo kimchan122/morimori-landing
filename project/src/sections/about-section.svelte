@@ -15,13 +15,13 @@
     let isInView = false;
     let hoveredIndex = -1;
 
-    let titleArray = ["ATELIER", "AREA", "ARENA"];
-    let scriptArray = [
+    let downloadTitleArray = ["ATELIER", "AREA", "ARENA"];
+    let downloadScriptArray = [
         "여러분의 소중한 작품을 모아 모두에게 보여주세요!",
         "창작자, 소비자가 모두 모여 자유롭게 소통해봐요!",
         "대회를 개최하여 작품을 받아보고, 작가님을 후원해봐요!",
     ];
-    let imageArray = [
+    let aboutImageArray = [
         "images/screenshot_atelier.png",
         "images/screenshot_area.png",
         "images/screenShot_arena.png",
@@ -70,7 +70,7 @@
     }}
 >
     <div class="container">
-        {#each titleArray as title, i}
+        {#each downloadTitleArray as title, i}
             <div
                 use:reveal={{ transition: "fade", delay: i * 100 }}
                 class="about-element"
@@ -85,7 +85,7 @@
                             delay: 50,
                         }}
                     >
-                        {scriptArray[i]}
+                        {downloadScriptArray[i]}
                     </div>
                 </div>
                 <div
@@ -99,7 +99,7 @@
                 >
                     <img
                         class="about-image"
-                        src={imageArray[i]}
+                        src={aboutImageArray[i]}
                         alt="home-horizontal"
                     />
                 </div>

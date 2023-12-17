@@ -16,19 +16,19 @@
     const options = {
         unobserveOnEnter: false,
     };
-    let titleArray = [
+    let downloadTitleArray = [
         "다양한 이벤트",
         "AI 무단학습 억제연구",
         "SNS 연동",
         "플랫폼 지원",
     ];
-    let scriptArray = [
+    let downloadScriptArray = [
         "MoriMori의 즐거운 이벤트와 함께하세요!",
         "MoriMori의 그림 무단학습 억제 정책과 함께하세요!",
         "MoriMori에 게시한 내용을 다양한 SNS를 통해 공유하세요!",
         "다양한 기기로 MoriMori를 즐겨보세요!",
     ];
-    let imageArray = [
+    let downloadImageArray = [
         "images/download01.png",
         "images/download02.png",
         "images/download03.png",
@@ -71,15 +71,15 @@
         <div class="role">
             <h1 use:reveal={{ transition: "fade", delay: 0 }}>DOWNLOAD</h1>
             <div class="role-box">
-                {#each titleArray as title, i}
+                {#each downloadTitleArray as title, i}
                     <div use:reveal={{ transition: "fade", delay: i * 100 }}>
                         <img
                             class="role-box-image"
-                            src={imageArray[i]}
+                            src={downloadImageArray[i]}
                             alt="role"
                         />
                         <h2>{title}</h2>
-                        <p>{scriptArray[i]}</p>
+                        <p>{downloadScriptArray[i]}</p>
                     </div>
                 {/each}
             </div>
